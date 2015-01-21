@@ -1,10 +1,10 @@
 {
   "name": "defaultTemplate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-      "start": "node index.js --dir='./public'"
+    "start": "node index.js --dir='./public'"
   },
   "repository": {
     "type": "git",
