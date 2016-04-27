@@ -1,4 +1,4 @@
-# IRS Labs Template
+# IRS Labs Standard Template
 
 This template serves basic HTML, JavaScript and CSS file prototypes from the 'public' directory using Node JS.
 
