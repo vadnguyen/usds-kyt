@@ -1,6 +1,6 @@
 {
   "name": "defaultTemplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "node": "0.10.x",
     "npm": "2.5.x"
@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.irslabs.org:sfpurdy/default-template.git"
+    "url": "git@git.irslabs.org:project-templates/default-template.git"
   },
   "author": "Steve Purdy <sfpurdy@mitre.org>",
   "license": "ISC",
   "dependencies": {
     "express": "~4.11.1",
-    "nginy": "git+https://git@github.com/spurdy/nginy.git"
+    "nginy": "git+https://git.irslabs.org/irslabs-dev-team/nginy.git"
   }
 }
