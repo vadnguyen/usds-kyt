@@ -1,9 +1,6 @@
 
 import React from 'react';
 import Alert from '../../lib/Alert';
-import Foo from '../../lib/Foo';
-import Bear from '../../lib/Bear';
-import Foobear from '../../lib/Foobear';
 import styles from './styles.scss';
 
 function Home() {
@@ -30,17 +27,17 @@ function Home() {
         title="Alert Title"
         body={message}
       />
-      <Foo
+      <Alert
         type="warning"
         title="Alert Title"
-        body={longMessage}
+        body={message}
       />
-      <Bear
+      <Alert
         type="error"
         title="Alert Title"
-        body={longMessage}
+        body={message}
       />
-      <Foobear
+      <Alert
         type="success"
         title="Alert Title"
         body={longMessage}
