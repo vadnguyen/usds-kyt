@@ -76,19 +76,3 @@ $alerts: map-merge($usa-alerts, $usa-custom-alerts);
     }
   }
 }
-
-.usa-alert-no_icon {
-  background-image: none;
-}
-
-.test {
-  background: url('#{$image-path}/angle-arrow-down-hover.png');
-}
-
-.test1 {
-  background: url('#{$image-path}/external-link-hover.png');
-}
-
-.test2 {
-  background: url('#{$image-path}/hero.png');
-}

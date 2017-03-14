@@ -1,3 +1,6 @@
+// Vendor
+$output-bourbon-deprecation-warnings: false;
+
 @import '../bourbon/app/assets/stylesheets/bourbon';
 @import '../bourbon-neat/app/assets/stylesheets/neat';
 
@@ -11,8 +14,9 @@
 // own partials, then @import '{path/to/uswds/}core/variables'.
 
 // Relative font and image file paths
-$font-path:   '../../public/fonts' !default;
-$image-path:  '../../public/images' !default;
+$font-path:   '../../assets/fonts' !default;
+$image-path:  '../../assets/images' !default;
+$component-image-path: '../../assets/images/';
 
 // Typography
 // Removing the !default from $em-base so we are not inheriting that 
