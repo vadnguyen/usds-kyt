@@ -1,8 +1,8 @@
-@import '../../shared-styles/core/variables';
+@import '../shared-styles/core/variables';
 
 // Alert variables ---------- //
 $usa-custom-alerts: () !default;
-$image-path: '../../../public/images/';
+$image-path: '../../public/images/';
 
 $usa-alerts: (
   success: $color-green-lightest,

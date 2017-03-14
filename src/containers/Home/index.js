@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Alert from '../../lib/components/Alert';
+import Alert from '../../lib/Alert';
 import styles from './styles.scss';
 
 function Home() {
