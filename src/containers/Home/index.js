@@ -2,9 +2,6 @@
 import React from 'react';
 import Alert from '../../lib/Alert';
 import Label from '../../lib/Label';
-import Foo from '../../lib/Foo';
-import Bear from '../../lib/Bear';
-import Foobear from '../../lib/Foobear';
 import styles from './styles.scss';
 
 function Home() {
