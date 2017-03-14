@@ -18,7 +18,7 @@ $alerts: map-merge($usa-alerts, $usa-custom-alerts);
   padding: 1em;
   font-size: 16px;
 
-  @include media($medium-screen) {
+  @include media-breakpoint-up(lg) {
     background-size: 5.2rem;
   }
 
@@ -37,7 +37,7 @@ $alerts: map-merge($usa-alerts, $usa-custom-alerts);
     background-position: 0.6em 1.25em;
     background-repeat: no-repeat;
 
-    @include media($medium-screen) {
+    @include media-breakpoint-up(lg) {
       background-size: 3.75em;
       background-position: 1em 1.25em;
     }
@@ -54,7 +54,7 @@ $alerts: map-merge($usa-alerts, $usa-custom-alerts);
   padding-left: 3em;
   vertical-align: top;
 
-  @include media($medium-screen) {
+  @include media-breakpoint-up(lg) {
     padding-left: 4.75em;
   }
 

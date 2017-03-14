@@ -1,23 +1,26 @@
 
 import React, { PropTypes } from 'react';
 import Link from 'react-router/lib/Link';
+import { FlexContainer, FlexRow, FlexCol } from '../../lib/FlexGrid';
 import styles from './styles.scss';
 
 function App({ children }) {
   return (
-    <div>
-      <ul className={styles.nav}>
-        <li className={styles.navItem}>
+    <FlexContainer>
+      <FlexRow>
+        <FlexCol>
           <Link className={styles.link} to="/">Home</Link>
-        </li>
-        <li className={styles.navItem}>
+        </FlexCol>
+        <FlexCol>
           <Link className={styles.link} to="/tools">Tools</Link>
-        </li>
-      </ul>
-      <div className={styles.content}>
-        {children}
-      </div>
-    </div>
+        </FlexCol>
+      </FlexRow>
+      <FlexRow>
+        <FlexCol md="12">
+          {children}
+        </FlexCol>
+      </FlexRow>
+    </FlexContainer>
   );
 }
 

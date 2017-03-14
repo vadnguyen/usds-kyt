@@ -1,0 +1,3 @@
+@function baselines($num, $font-size: $base-font-size, $line-height: $base-line-height) {
+  @return $num * ($font-size * $line-height);
+}

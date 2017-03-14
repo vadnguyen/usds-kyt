@@ -2,6 +2,7 @@
 import React from 'react';
 import Alert from '../../lib/Alert';
 import Label from '../../lib/Label';
+import { FlexRow, FlexCol } from '../../lib/FlexGrid';
 import styles from './styles.scss';
 
 function Home() {
@@ -24,11 +25,23 @@ function Home() {
         Check out the Tools section for an outline of the libraries that
         are used in this Starter-kyt.
       </p>
-      <Alert
-        type="info"
-        title="Going to the Markety"
-        body={message}
-      />
+      <FlexRow>
+        <FlexCol md="10" mdOffset="1" lg="6" lgOffset="0">
+          <Alert
+            type="info"
+            title="Going to the Markety"
+            body={message}
+          />
+        </FlexCol>
+        <FlexCol md="10" mdOffset="1" lg="6" lgOffset="0">
+          <Alert
+            type="info"
+            title="Going to the Markety"
+            body={message}
+          />
+        </FlexCol>
+      </FlexRow>
+
       <Alert
         type="warning"
         title="Alert Title"
