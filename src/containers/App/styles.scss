@@ -1,4 +1,4 @@
-@import '../../lib/shared-styles/uswds';
+// @import '../../lib/shared-styles/uswds';
 @import '../../shared-styles/variables';
 
 .header {
@@ -13,7 +13,7 @@
 }
 
 .content {
-  width: $content-width;
+  max-width: $content-width;
   margin: $padding auto;
 }
 

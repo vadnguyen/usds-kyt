@@ -26,7 +26,7 @@ function Home() {
       </p>
       <Alert
         type="info"
-        title="Alert Title"
+        title="Going to the Markety"
         body={message}
       />
       <Alert

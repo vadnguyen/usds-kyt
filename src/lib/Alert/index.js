@@ -20,12 +20,14 @@ import styles from './styles.scss';
  * @param {string} role  ARIA role type
  */
 export default function Alert({ type, title, body, role }) {
+  const classNames = [styles['usa-alert'], styles[`usa-alert-${type}`]];
+
   if (type === 'error' && !role) {
     role = 'alert';
   }
 
   return (
-    <div className={styles[`usa-alert-${type}`]} role={role}>
+    <div className={classNames.join(' ')} role={role}>
       <div className={styles['usa-alert-body']}>
         <h3 className={styles['usa-alert-heading']}>{title}</h3>
         <div className={styles['usa-alert-text']}>{body}</div>
