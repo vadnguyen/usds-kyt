@@ -4,3 +4,8 @@
 .paragraph + .paragraph {
   padding-top: $padding;
 }
+
+h1 > span {
+  position: relative;
+  top: -1em;
+}
