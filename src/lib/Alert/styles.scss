@@ -1,4 +1,4 @@
-@import '../shared-styles/core/variables';
+@import '../shared-styles/variables';
 
 // Alert variables ---------- //
 $usa-custom-alerts: () !default;
@@ -8,7 +8,7 @@ $usa-alerts: (
   success: $color-green-lightest,
   warning: $color-gold-lightest,
   error: $color-secondary-lightest,
-  info: $color-primary-alt-lightest
+  info: $color-primary-lightest
 );
 
 $alerts: map-merge($usa-alerts, $usa-custom-alerts);

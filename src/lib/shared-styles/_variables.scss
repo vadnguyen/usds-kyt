@@ -1,8 +1,9 @@
 // Vendor
 $output-bourbon-deprecation-warnings: false;
-@import '../mixins/__mixins.scss';
-@import '../bourbon/app/assets/stylesheets/bourbon';
-@import '../bourbon-neat/app/assets/stylesheets/neat';
+
+@import './mixins/__mixins.scss';
+// @import '../bourbon/app/assets/stylesheets/bourbon';
+// @import '../bourbon-neat/app/assets/stylesheets/neat';
 
 // These variables drive almost every aspect of the U.S. Web Design
 // system. Every variable is declared as !default so that it can be
@@ -16,52 +17,47 @@ $output-bourbon-deprecation-warnings: false;
 // Relative font and image file paths
 $font-path:   '../../assets/fonts' !default;
 $image-path:  '../../assets/images' !default;
-$component-image-path: '../../assets/images/';
 
 // Typography
-// Removing the !default from $em-base so we are not inheriting that
-// value from Bourbon.
-$em-base:             16px;
+// $em-base:             16px;
 $base-font-size:      16px !default;
-$small-font-size:     rem(14px) !default;
-$lead-font-size:      rem(20px) !default;
-$title-font-size:     rem(52px) !default;
-$h1-font-size:        rem(40px) !default;
-$h2-font-size:        rem(30px) !default;
-$h3-font-size:        rem(20px) !default;
-$h4-font-size:        rem(17px) !default;
-$h5-font-size:        rem(15px) !default;
-$h6-font-size:        rem(13px) !default;
+$small-font-size:     13px !default;
+$lead-font-size:      20px !default;
+$title-font-size:     52px !default;
+$h1-font-size:        40px !default;
+$h2-font-size:        30px !default;
+$h3-font-size:        20px !default;
+$h4-font-size:        17px !default;
+$h5-font-size:        14px !default;
+$h6-font-size:        13px !default;
 $base-line-height:    1.5 !default;
 $heading-line-height: 1.3 !default;
 $lead-line-height:    1.7 !default;
 
-$font-sans:           'Source Sans Pro', $helvetica !default;
-$font-serif:          'Merriweather', $georgia !default;
+$font-sans:           'Source Sans Pro', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif !default;
+$font-serif:          'Merriweather', 'Georgia', 'Cambria', 'Times New Roman', 'Times', serif !default;
 
 $font-normal:         400 !default;
 $font-bold:           700 !default;
 
 // Color
-$color-primary:              #0071bc !default;
-$color-primary-darker:       #205493 !default;
-$color-primary-darkest:      #112e51 !default;
+$color-blue:                 #227dae !default;
+$color-blue-darker:          #196392 !default;
+$color-blue-darkest:         #234e76 !default;
+$color-blue-lightest:        #eaf2fa !default;
 
-$color-primary-alt:          #02bfe7 !default;
-$color-primary-alt-dark:     #00a6d2 !default;
-$color-primary-alt-darkest:  #046b99 !default;
-$color-primary-alt-light:    #9bdaf1 !default; // lighten($color-primary-alt, 60%)
-$color-primary-alt-lightest: #e1f3f8 !default; // lighten($color-primary-alt, 90%)
+$color-irs-red:              #a6192e !default;
+$color-irs-red-lightest:     #faf0f0 !default;
 
-$color-secondary:            #e31c3d !default;
-$color-secondary-dark:       #cd2026 !default;
-$color-secondary-darkest:    #981b1e !default;
-$color-secondary-light:      #e59393 !default; // lighten($color-secondary, 60%)
-$color-secondary-lightest:   #f9dede !default; // lighten($color-secondary, 90%)
+$color-usa-red:              #e31c3d !default;
+$color-usa-red-dark:         #cd2026 !default;
+$color-usa-red-darkest:      #981b1e !default;
+$color-usa-red-light:        #e59393 !default; // lighten($color-usa-red, 60%)
+$color-usa-red-lightest:     #f9dede !default; // lighten($color-usa-red, 90%)
 
-$color-white:                #ffffff !default;
+$color-white:                #fff !default;
 $color-base:                 #212121 !default;
-$color-black:                #000000 !default;
+$color-black:                #000 !default;
 
 $color-gray-dark:            #323a45 !default;
 $color-gray:                 #5b616b !default; // lighten($color-gray-dark, 20%)
@@ -84,33 +80,30 @@ $color-green-light:          #4aa564 !default; // lighten($color-green, 20%)
 $color-green-lighter:        #94bfa2 !default; // lighten($color-green, 60%)
 $color-green-lightest:       #e7f4e4 !default; // lighten($color-green, 60%)
 
-$color-cool-blue:            #205493 !default;
-$color-cool-blue-light:      #4773aa !default; // lighten($color-cool-blue, 20%)
-$color-cool-blue-lighter:    #8ba6ca !default; // lighten($color-cool-blue, 60%)
-$color-cool-blue-lightest:   #dce4ef !default; // lighten($color-cool-blue, 90%)
+// $color-primary-alt:          #02bfe7 !default;
+// $color-primary-alt-dark:     #00a6d2 !default;
+// $color-primary-alt-darkest:  #046b99 !default;
+// $color-primary-alt-light:    #9bdaf1 !default;
+// $color-primary-alt-lightest: #e1f3f8 !default;
+// $color-cool-blue:            #205493 !default;
+// $color-cool-blue-light:      #4773aa !default;
+// $color-cool-blue-lighter:    #8ba6ca !default;
+// $color-cool-blue-lightest:   #dce4ef !default;
+
+$color-primary:              $color-blue;
+$color-primary-darker:       $color-blue-darker;
+$color-primary-darkest:      $color-blue-darkest;
+$color-primary-lightest:     $color-blue-lightest;
+
+$color-secondary:            $color-usa-red;
+$color-secondary-dark:       $color-usa-red-dark;
+$color-secondary-darkest:    $color-usa-red-darkest;
+$color-secondary-light:      $color-usa-red-light;
+$color-secondary-lightest:   $color-usa-red-lightest;
 
 $color-focus:                #3e94cf !default;
 $color-visited:              #4c2c92 !default;
-
 $color-shadow:               rgba(#000, 0.3) !default;
-
-// Mobile First Breakpoints
-$small-screen:  481px !default;
-$medium-screen: 600px !default;
-$large-screen:  1201px !default;
-
-// Grid column counts by screen size
-$grid-columns-small: 1 !default;
-$grid-columns-medium: 6 !default;
-$grid-columns-large: 12 !default;
-
-// @media single-keyword helpers
-$small: new-breakpoint(min-width $small-screen $grid-columns-small) !default;
-$medium: new-breakpoint(min-width $medium-screen $grid-columns-medium) !default;
-$large: new-breakpoint(min-width $large-screen $grid-columns-large) !default;
-
-// Set $asset-pipeline to true if you're using the Rails Asset Pipeline
-$asset-pipeline:      false !default;
 
 // Magic Numbers
 $text-max-width:      53rem !default;
@@ -142,9 +135,9 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px
 ) !default;
-@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-@include _assert-starts-at-zero($grid-breakpoints);
 
+@include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
+@include _assert-starts-at-zero($grid-breakpoints);
 
 // Grid containers
 $container-max-widths: (
@@ -153,8 +146,8 @@ $container-max-widths: (
   lg: 960px,
   xl: 1140px
 ) !default;
-@include _assert-ascending($container-max-widths, "$container-max-widths");
 
+@include _assert-ascending($container-max-widths, '$container-max-widths');
 
 // Grid columns
 $grid-columns:               12 !default;
@@ -166,3 +159,21 @@ $grid-gutter-widths: (
   lg: $grid-gutter-width-base,
   xl: $grid-gutter-width-base
 ) !default;
+
+// Mobile First Breakpoints
+// $small-screen:  481px !default;
+// $medium-screen: 600px !default;
+// $large-screen:  1201px !default;
+
+// Grid column counts by screen size
+// $grid-columns-small: 1 !default;
+// $grid-columns-medium: 6 !default;
+// $grid-columns-large: 12 !default;
+
+// @media single-keyword helpers
+// $small: new-breakpoint(min-width $small-screen $grid-columns-small) !default;
+// $medium: new-breakpoint(min-width $medium-screen $grid-columns-medium) !default;
+// $large: new-breakpoint(min-width $large-screen $grid-columns-large) !default;
+
+// Set $asset-pipeline to true if you're using the Rails Asset Pipeline
+// $asset-pipeline:      false !default;

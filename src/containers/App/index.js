@@ -8,15 +8,15 @@ function App({ children }) {
   return (
     <FlexContainer>
       <FlexRow>
-        <FlexCol>
-          <Link className={styles.link} to="/">Home</Link>
+        <FlexCol md="2">
+          <div>
+            <Link className={styles.link} to="/">Home</Link>
+          </div>
+          <div>
+            <Link className={styles.link} to="/tools">Tools</Link>
+          </div>
         </FlexCol>
-        <FlexCol>
-          <Link className={styles.link} to="/tools">Tools</Link>
-        </FlexCol>
-      </FlexRow>
-      <FlexRow>
-        <FlexCol md="12">
+        <FlexCol md="10">
           {children}
         </FlexCol>
       </FlexRow>
