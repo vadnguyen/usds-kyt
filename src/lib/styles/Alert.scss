@@ -1,4 +1,4 @@
-@import '../shared-styles/variables';
+@import './shared/variables';
 
 // Alert variables ---------- //
 $usa-custom-alerts: () !default;
@@ -64,7 +64,7 @@ $alerts: map-merge($usa-alerts, $usa-custom-alerts);
 }
 
 .usa-alert-heading {
-  margin-bottom: 0.25em;
+  margin-bottom: 0.1em;
   margin-top: 0;
   font-family: $font-sans;
   font-weight: $font-bold;

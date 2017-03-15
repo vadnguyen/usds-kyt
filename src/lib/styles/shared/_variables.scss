@@ -1,9 +1,12 @@
+$em-base: 16px;
+$rem-base: 16px;
+
 @import './mixins/__mixins.scss';
 
 // Vendor
 // $output-bourbon-deprecation-warnings: false;
 // @import '../bourbon/app/assets/stylesheets/bourbon';
-// @import '../bourbon-neat/app/assets/stylesheets/neat';
+// @import './bourbon-neat/app/assets/stylesheets/neat';
 
 // These variables drive almost every aspect of the U.S. Web Design
 // system. Every variable is declared as !default so that it can be
@@ -13,11 +16,10 @@
 // own partials, then @import '{path/to/uswds/}core/variables'.
 
 // Relative font and image file paths
-$font-path:   '../../assets/fonts' !default;
-$image-path:  '../../assets/images' !default;
+$font-path:   '../assets/fonts' !default;
+$image-path:  '../assets/images' !default;
 
 // Typography
-// $em-base:             16px;
 $base-font-size:      16px !default;
 $small-font-size:     13px !default;
 $lead-font-size:      20px !default;
@@ -104,14 +106,14 @@ $color-visited:              #4c2c92 !default;
 $color-shadow:               rgba(#000, 0.3) !default;
 
 // Magic Numbers
-$text-max-width:      53rem !default;
-$lead-max-width:      77rem !default;
+$text-max-width:      35em !default;
+$lead-max-width:      50em !default;
 $site-max-width:      100% !default;
-$site-margins:        3rem !default;
-$site-margins-mobile: 1.5rem !default;
+$site-margins:        30px !default;
+$site-margins-mobile: 15px !default;
 $article-max-width:   600px !default;
-$input-max-width:     46rem !default;
-$border-radius:       rem(3px) !default;
+$input-max-width:     30em !default;
+$border-radius:       3px !default;
 $box-shadow:          0 0 2px $color-shadow !default;
 $focus-shadow:        0 0 3px $color-focus, 0 0 7px $color-focus !default;
 $nav-width:           951px !default;

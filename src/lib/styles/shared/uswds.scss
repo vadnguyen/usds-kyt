@@ -1,4 +1,14 @@
-// @import 'normalize.css/normalize';
+html { // http://bit.ly/1qk2tVR
+  box-sizing: border-box;
+}
+
+* {
+  &,
+  &::after,
+  &::before {
+    box-sizing: inherit;
+  }
+}
 
 // Core
 @import "mixins/__mixins.scss";

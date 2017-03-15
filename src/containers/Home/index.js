@@ -1,8 +1,8 @@
 
 import React from 'react';
-import Alert from '../../lib/Alert';
-import Label from '../../lib/Label';
-import { FlexRow, FlexCol } from '../../lib/FlexGrid';
+import Alert from '../../lib/components/Alert';
+import Label from '../../lib/components/Label';
+import { FlexRow, FlexCol } from '../../lib/components/FlexGrid';
 import styles from './styles.scss';
 
 function Home() {

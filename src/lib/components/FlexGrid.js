@@ -1,10 +1,15 @@
 import React, { PropTypes } from 'react';
 import classnames from '../helpers/classnames';
-import styles from './styles.scss';
+import styles from '../styles/FlexGrid.scss';
 
-export function FlexContainer({ children }) {
+export function FlexContainer({ children, fluid }) {
+  const style = classnames({
+    [styles.container]: !fluid,
+    [styles['container-fluid']]: fluid,
+  });
+
   return (
-    <div className={styles.container}>
+    <div className={classnames(style)}>
       {children}
     </div>
   );
@@ -12,6 +17,7 @@ export function FlexContainer({ children }) {
 
 FlexContainer.propTypes = {
   children: PropTypes.node,
+  fluid: PropTypes.bool,
 };
 
 export function FlexRow(props) {
@@ -23,7 +29,7 @@ export function FlexRow(props) {
   });
 
   return (
-    <div className={classnames(alignmentClassName)}>
+    <div className={classnames(alignmentClassName, props.className)}>
       {props.children}
     </div>
   );
@@ -48,6 +54,7 @@ FlexRow.propTypes = {
     'around',
     'between',
   ]),
+  className: PropTypes.string,
 };
 
 export function FlexCol(props) {
@@ -88,7 +95,12 @@ export function FlexCol(props) {
   });
 
   return (
-    <div className={classnames(sizeClassName, offsetClassName, pullClassName, pushClassName)}>
+    <div
+      className={classnames(
+        sizeClassName, offsetClassName, pullClassName,
+        pushClassName, props.className
+      )}
+    >
       {props.children}
     </div>
   );
@@ -96,6 +108,7 @@ export function FlexCol(props) {
 
 FlexCol.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
   xs: PropTypes.string,
   sm: PropTypes.string,
   md: PropTypes.string,

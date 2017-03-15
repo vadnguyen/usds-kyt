@@ -1,4 +1,4 @@
-@import '../shared-styles/variables';
+@import './shared/variables';
 
 // Breakpoint viewport sizes and media queries.
 //
@@ -104,6 +104,7 @@
 .container {
   @include make-container();
   @include make-container-max-widths();
+  box-sizing: border-box;
 }
 
 // Fluid container
@@ -113,6 +114,7 @@
 
 .container-fluid {
   @include make-container();
+  box-sizing: border-box;
 }
 
 // Row
@@ -121,6 +123,7 @@
 
 .row {
   @include make-row();
+  box-sizing: border-box;
 }
 
 // Remove the negative margin from default .row, then the horizontal padding
@@ -133,6 +136,7 @@
   > [class*="col-"] {
     padding-right: 0;
     padding-left: 0;
+    box-sizing: border-box;
   }
 }
 

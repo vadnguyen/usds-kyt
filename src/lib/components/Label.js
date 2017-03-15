@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import styles from './styles.scss';
+import styles from '../styles/Label.scss';
 
 /**
  * The Label component shows a colored pill of text.

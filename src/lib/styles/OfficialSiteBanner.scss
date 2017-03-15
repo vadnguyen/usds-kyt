@@ -1,0 +1,225 @@
+@import './shared/variables';
+
+$font-size: $h6-font-size;
+
+.usa-banner {
+  background-color: $color-gray-lightest;
+  padding-bottom: rem(15px);
+  font-family: $font-sans;
+  line-height: $base-line-height;
+  font-size: $font-size;
+
+  @include media-breakpoint-up(sm) {
+    padding-bottom: 0;
+  }
+}
+
+.usa-banner-content {
+  padding-bottom: em(3px, $font-size);
+  background-color: transparent;
+  font-size: $h5-font-size;
+  padding-top: em(10px, $font-size);
+  width: 100%;
+
+  @include media-breakpoint-up(sm) {
+    padding-bottom: em(20px, $font-size);
+  }
+}
+
+// .usa-banner-inner {
+//   // @include outer-container();
+//   padding-left: $site-margins-mobile;
+//   padding-right: $site-margins-mobile;
+//   max-width: $site-max-width;
+//
+//   @include media-breakpoint-up(lg) {
+//     padding-left: $site-margins;
+//     padding-right: $site-margins;
+//   }
+// }
+
+.usa-banner-header {
+  padding: rem(5px) 0;
+  font-size: 1em;
+  font-weight: $font-normal;
+
+  @include media-breakpoint-up(sm) {
+    padding: 0;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline;
+    overflow: hidden;
+    vertical-align: middle;
+
+    @include media-breakpoint-up(sm) {
+      margin-top: 2px;
+      margin-bottom: 2px;
+      display: inline-block;
+    }
+  }
+
+  img {
+    // float: left;
+    display: inline;
+    vertical-align: middle;
+    margin-right: rem(10px);
+    margin-top: 1px;
+    width: rem(24px);
+
+    @include media-breakpoint-up(sm) {
+      margin-right: rem(7px);
+      width: rem(20px);
+    }
+  }
+
+
+}
+
+// .usa-banner-header-expanded {
+//   align-items: center;
+//   border-bottom: 1px solid $color-gray-light;
+//   display: flex;
+//   font-size: $h5-font-size;
+//   min-height: rem(56px);
+//   padding-right: rem(30px);
+//
+//   @include media-breakpoint-up(sm) {
+//     border-bottom: none;
+//     display: block;
+//     font-size: rem(12px);
+//     font-weight: $font-normal;
+//     min-height: 0;
+//     padding-right: 0;
+//   }
+//
+//   > .usa-banner-inner {
+//     margin-left: 0;
+//
+//     @include media-breakpoint-up(sm) {
+//       margin-left: auto;
+//     }
+//   }
+//
+//   img {
+//     margin-right: rem(24px);
+//
+//     @include media-breakpoint-up(sm) {
+//       margin-right: rem(7px);
+//     }
+//   }
+//
+//   p {
+//     line-height: $heading-line-height;
+//     vertical-align: top;
+//
+//     @include media-breakpoint-up(sm) {
+//       line-height: $base-line-height;
+//       vertical-align: middle;
+//     }
+//   }
+// }
+
+.usa-banner-button {
+  appearance: none;
+  border: none;
+  background: none;
+  outline: none;
+  vertical-align: middle;
+  padding-top: em(13px, $font-size);
+  padding-left: rem(48px);
+  background-position-x: right;
+  color: $color-primary;
+  text-align: left;
+  display: block;
+  font-size: 1em;
+  line-height: $base-line-height;
+  height: em(50px, $font-size);
+  left: 0;
+  position: absolute;
+  text-decoration: underline;
+  top: 0;
+  width: 100%;
+
+  @include media-breakpoint-up(sm) {
+    padding: 0;
+    /* stylelint-disable declaration-block-no-ignored-properties */
+    display: inline;
+    height: auto;
+    margin-left: 8px;
+    position: relative;
+    vertical-align: middle;
+    width: auto;
+    /* stylelint-enable */
+  }
+
+  &:hover {
+    color: $color-primary-darker;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    box-shadow: $focus-shadow;
+  }
+
+  &[aria-expanded=false] {
+    @include display-icon(angle-arrow-down-primary, after, rem(10px), rem(4px), hover);
+    background-image: none;
+
+    &::after {
+      background-position-y: 1px;
+    }
+  }
+
+  &[aria-expanded=true] {
+    @include display-icon(close, after, rem(13px), 0, no-hover);
+    background-image: none;
+
+    @include media-breakpoint-up(sm) {
+      @include display-icon(angle-arrow-up-primary, after, rem(10px), rem(4px), hover);
+      height: initial;
+      padding: 0;
+      position: relative;
+
+      &::after {
+        background-position-y: 1px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      right: rem(15px);
+      top: rem(21.5px);
+
+      @include media-breakpoint-up(sm) {
+        position: static;
+      }
+    }
+
+    .usa-banner-button-text {
+      display: none;
+
+      @include media-breakpoint-up(sm) {
+        display: inline;
+      }
+    }
+  }
+}
+
+.usa-banner-icon {
+  width: rem(38px);
+  float: left;
+  margin-right: rem(10px)
+}
+
+.usa-banner-textblock {
+  overflow: hidden;
+  font-size: rem(15px);
+}
+
+.usa-banner-content-group {
+  padding-top: rem(20px);
+
+}
