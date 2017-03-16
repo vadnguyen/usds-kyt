@@ -2,14 +2,14 @@ import React, { PropTypes } from 'react';
 import classnames from '../helpers/classnames';
 import styles from '../styles/FlexGrid.scss';
 
-export function FlexContainer({ children, fluid }) {
+export function FlexContainer({ children, fluid, role }) {
   const style = classnames({
     [styles.container]: !fluid,
     [styles['container-fluid']]: fluid,
   });
 
   return (
-    <div className={classnames(style)}>
+    <div className={classnames(style)} role={role}>
       {children}
     </div>
   );
@@ -18,6 +18,7 @@ export function FlexContainer({ children, fluid }) {
 FlexContainer.propTypes = {
   children: PropTypes.node,
   fluid: PropTypes.bool,
+  role: PropTypes.string,
 };
 
 export function FlexRow(props) {

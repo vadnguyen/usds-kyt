@@ -1,0 +1,27 @@
+@import './shared/variables';
+
+.irsHeader {
+  background: $color-primary-darkest;
+  color: white;
+  font-family: $font-sans;
+  padding: 1.6em 0;
+}
+
+.irsLogo {
+  background: $color-primary-darkest;
+  float: left;
+  outline: none;
+
+  &:focus {
+    box-shadow: $focus-shadow;
+  }
+
+  img {
+    width: rem(80px);
+
+    @include media-breakpoint-up(sm) {
+      width: rem(140px);
+    }
+  }
+}
+
