@@ -1,4 +1,5 @@
 @import './shared/variables';
+@import './shared/core/utilities';
 
 .irsHeader {
   background: $color-primary-darkest;
@@ -25,3 +26,54 @@
   }
 }
 
+.nav {
+  // @include font-smoothing;
+  text-align: right;
+
+  ul {
+    @include unstyled-list;
+  }
+
+  li {
+    display: inline-block;
+    padding: 0 1em;
+    border-right: solid 1px $color-white;
+    font-size: 1em;
+    line-height: 1;
+
+    &.welcome {
+      display: none;
+
+      @include media-breakpoint-up(md) {
+        display: inline-block;
+      }
+    }
+
+    &:last-of-type {
+      border-right: none;
+    }
+
+    a, a:visited {
+      color: $color-white;
+      text-decoration: none;
+
+      &:focus {
+        box-shadow: $focus-shadow;
+        outline: none;
+      }
+    }
+
+  }
+}
+
+
+
+.logout {
+  @include display-icon(sign-out, before, em(18px), em(6px), nohover);
+
+  &::before {
+    background-position-y: em(2px);
+    top: em(4px);
+    // position: absolute;
+  }
+}

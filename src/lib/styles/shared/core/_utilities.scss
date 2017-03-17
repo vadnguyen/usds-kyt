@@ -24,7 +24,8 @@
 
 // Unstyled list helper
 @mixin unstyled-list() {
-  @include margin(0 null);
+  margin-top: 0;
+  margin-bottom: 0;
   list-style-type: none;
   padding-left: 0;
 
@@ -94,13 +95,15 @@
 
 @mixin display-icon($icon, $direction, $size, $margin, $hover) {
   &::#{$direction} {
-    background-image: url(#{$image-path}/#{$icon}.png);
+    // background-image: url(#{$image-path}/#{$icon}.png);
     background-image: url(#{$image-path}/#{$icon}.svg);
     background-size: 100%;
+    background-repeat: no-repeat;
     content: '';
     display: inline-block;
     height: $size;
     width: $size;
+    position: relative;
 
     /* stylelint-disable block-closing-brace-newline-after, at-rule-empty-line-before */
     @if $direction == 'after' {

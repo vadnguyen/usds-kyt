@@ -67,7 +67,7 @@ $font-size: $h6-font-size;
     vertical-align: middle;
     margin-right: rem(10px);
     margin-top: 1px;
-    width: rem(24px);
+    width: em(24px, $font-size);
 
     @include media-breakpoint-up(sm) {
       margin-right: rem(7px);
@@ -129,7 +129,7 @@ $font-size: $h6-font-size;
   outline: none;
   vertical-align: middle;
   padding-top: em(13px, $font-size);
-  padding-left: rem(48px);
+  padding-left: em(48px, $font-size);
   background-position-x: right;
   color: $color-primary;
   text-align: left;

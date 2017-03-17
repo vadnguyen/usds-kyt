@@ -67,7 +67,7 @@ export function FlexCol(props) {
     [styles[`col-xl-${props.xl}`]]: props.xl,
   });
 
-  if (!props.sm && !props.md && !props.lg && !props.xl) {
+  if (!props.xs && !props.sm && !props.md && !props.lg && !props.xl) {
     sizeClassName = styles.col;
   }
 
