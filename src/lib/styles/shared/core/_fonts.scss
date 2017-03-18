@@ -1,34 +1,34 @@
-@include font-face(
-  'Merriweather',
-  '#{$font-path}/merriweather-light-webfont',
-  300,
-  normal,
-  $file-formats: eot woff2 woff ttf
-);
-
-@include font-face(
-  'Merriweather',
-  '#{$font-path}/merriweather-regular-webfont',
-  400,
-  normal,
-  $file-formats: eot woff2 woff ttf
-);
-
-@include font-face(
-  'Merriweather',
-  '#{$font-path}/merriweather-italic-webfont',
-  400,
-  italic,
-  $file-formats: eot woff2 woff ttf
-);
-
-@include font-face(
-  'Merriweather',
-  '#{$font-path}/merriweather-bold-webfont',
-  700,
-  normal,
-  $file-formats: eot woff2 woff ttf
-);
+// @include font-face(
+//   'Merriweather',
+//   '#{$font-path}/merriweather-light-webfont',
+//   300,
+//   normal,
+//   $file-formats: eot woff2 woff ttf
+// );
+//
+// @include font-face(
+//   'Merriweather',
+//   '#{$font-path}/merriweather-regular-webfont',
+//   400,
+//   normal,
+//   $file-formats: eot woff2 woff ttf
+// );
+//
+// @include font-face(
+//   'Merriweather',
+//   '#{$font-path}/merriweather-italic-webfont',
+//   400,
+//   italic,
+//   $file-formats: eot woff2 woff ttf
+// );
+//
+// @include font-face(
+//   'Merriweather',
+//   '#{$font-path}/merriweather-bold-webfont',
+//   700,
+//   normal,
+//   $file-formats: eot woff2 woff ttf
+// );
 
 @include font-face(
   'Source Sans Pro',

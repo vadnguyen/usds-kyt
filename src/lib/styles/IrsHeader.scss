@@ -1,6 +1,10 @@
 @import './shared/variables';
 @import './shared/core/utilities';
 
+body {
+  background: url('#{$image-path}/irs-swirl.png');
+}
+
 .irsHeader {
   background: $color-primary-darkest;
   color: white;

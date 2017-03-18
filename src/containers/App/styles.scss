@@ -1,17 +1,3 @@
 // @import '../../lib/shared-styles/uswds';
-// @import '../../shared-styles/variables';
-
-.header {
-  text-align: center;
-}
-
-.nav {
-  // width: $content-width;
-  margin: 0 auto;
-  // padding: $padding;
-  text-align: center;
-}
-
-.navItem {
-  display: inline-block;
-}
+@import '../../lib/styles/shared/variables';
+@import '../../lib/styles/shared/core/base';
