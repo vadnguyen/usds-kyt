@@ -20,7 +20,7 @@ export default function IrsHeader(props) {
                 <li>
                   <a href="">
                     Profile
-                    <span className={styles['usa-sr-only']}>
+                    <span className={styles.sr}>
                       This link will open User Profile page in the same browser window.
                     </span>
                   </a>
@@ -28,7 +28,7 @@ export default function IrsHeader(props) {
                 <li>
                   <a className={styles.logout} href="">
                     Logout
-                    <span className={styles['usa-sr-only']}>
+                    <span className={styles.sr}>
                       This link will log the user out.
                     </span>
                   </a>

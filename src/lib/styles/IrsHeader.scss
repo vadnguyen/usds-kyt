@@ -1,8 +1,11 @@
 @import './shared/variables';
-@import './shared/core/utilities';
 
 body {
   background: url('#{$image-path}/irs-swirl.png');
+}
+
+.sr {
+  @include sr-only;
 }
 
 .irsHeader {
@@ -41,7 +44,7 @@ body {
   li {
     display: inline-block;
     padding: 0 1em;
-    border-right: solid 1px $color-white;
+    border-right: solid 1px rgba($color-white, 0.5);
     font-size: 1em;
     line-height: 1;
 
@@ -57,7 +60,8 @@ body {
       border-right: none;
     }
 
-    a, a:visited {
+    a,
+    a:visited {
       color: $color-white;
       text-decoration: none;
 
@@ -66,18 +70,14 @@ body {
         outline: none;
       }
     }
-
   }
 }
-
-
 
 .logout {
   @include display-icon(sign-out, before, em(18px), em(6px), nohover);
 
   &::before {
     background-position-y: em(2px);
-    top: em(4px);
-    // position: absolute;
+    vertical-align: em(-4px);
   }
 }
