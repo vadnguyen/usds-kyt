@@ -33,8 +33,15 @@ body {
   }
 }
 
+.navContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .nav {
-  // @include font-smoothing;
+  @include font-smoothing;
+
   text-align: right;
 
   ul {

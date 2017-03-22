@@ -24,6 +24,7 @@
 
   &:hover {
     box-shadow: $button-stroke $color-primary-darker;
+    background-color: $color-gray-lightest;
     color: $color-primary-darker;
   }
 

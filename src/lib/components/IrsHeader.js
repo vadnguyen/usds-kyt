@@ -13,7 +13,7 @@ export default function IrsHeader(props) {
               <img src={irsLogo} alt="" />
             </a>
           </FlexCol>
-          <FlexCol xs="8">
+          <FlexCol xs="8" className={styles.navContainer}>
             <nav className={styles.nav}>
               <ul>
                 <li className={styles.welcome}>Welcome, {props.userFullName}</li>
