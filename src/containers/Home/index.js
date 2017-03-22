@@ -2,6 +2,7 @@
 import React from 'react';
 import Alert from '../../lib/components/Alert';
 import Label from '../../lib/components/Label';
+import Panel from '../../lib/components/Panel';
 import PrimaryButton from '../../lib/components/PrimaryButton';
 import SecondaryButton from '../../lib/components/SecondaryButton';
 import { FlexRow, FlexCol } from '../../lib/components/FlexGrid';
@@ -33,6 +34,13 @@ function Home() {
       <SecondaryButton padded>Click me</SecondaryButton>
       <PrimaryButton block>Click me</PrimaryButton>
       <SecondaryButton block>Click me</SecondaryButton>
+      <FlexRow>
+        <FlexCol>
+          <Panel title="Panel title">
+            {`Hello, I'm a panel`}
+          </Panel>
+        </FlexCol>
+      </FlexRow>
       <FlexRow>
         <FlexCol md="10" mdOffset="1" lg="6" lgOffset="0">
           <Alert

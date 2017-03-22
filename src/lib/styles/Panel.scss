@@ -1,0 +1,16 @@
+@import './shared/variables';
+
+.panel {
+  background: white;
+  border: solid 1px $color-gray-lighter;
+
+  .title {
+    margin-bottom: baselines(1);
+    font-family: $font-sans;
+    font-weight: $font-normal;
+    font-size: $h3-font-size;
+    padding-top: $module-padding;
+    padding-left: $module-padding;
+    padding-right: $module-padding;
+  }
+}

@@ -1,10 +1,11 @@
 @import './shared/variables';
+$vertical-padding: $input-padding-vertical + $input-border-width;
 
 .primaryButton {
-  margin-right: rem(10px);
-  margin-top: rem(baselines(1));
-  margin-bottom: rem(baselines(1));
-  padding: rem($input-padding-vertical + $input-border-width) rem(20px);
+  margin-right: $module-padding;
+  margin-top: baselines(1);
+  margin-bottom: baselines(1);
+  padding: $vertical-padding rem(20px);
   appearance: none;
   border: 0;
   border-radius: $border-radius;

@@ -105,12 +105,14 @@ $color-focus:                #3e94cf !default;
 $color-visited:              #4c2c92 !default;
 $color-shadow:               rgba(#000, 0.3) !default;
 
+$module-padding:         rem(15px);
+
 // Input sizes
 $input-line-height:      1.25 !default;
-$input-border-width:     1px !default;
-$input-padding-vertical: 10px !default;
-$input-max-width:        46rem !default;
-$button-stroke:          inset 0 0 0 2px;
+$input-border-width:     rem(1px) !default;
+$input-padding-vertical: rem(10px) !default;
+$input-max-width:        rem(700px) !default;
+$button-stroke:          inset 0 0 0 rem(2px);
 
 // Magic Numbers
 $text-max-width:      35em !default;

@@ -14,9 +14,9 @@ $usa-alerts: (
 $alerts: map-merge($usa-alerts, $usa-custom-alerts);
 
 .usa-alert {
-  margin-top: 1.5em;
-  padding: 1em;
-  font-size: 16px;
+  margin-top: baselines(2);
+  padding: $module-padding;
+  font-size: $base-font-size;
 
   @include media-breakpoint-up(lg) {
     background-size: 5.2rem;
