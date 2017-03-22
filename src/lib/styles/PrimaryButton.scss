@@ -3,8 +3,8 @@ $vertical-padding: $input-padding-vertical + $input-border-width;
 
 .primaryButton {
   margin-right: $module-padding;
-  margin-top: baselines(1);
-  margin-bottom: baselines(1);
+  margin-top: $module-padding;
+  margin-bottom: $module-padding;
   padding: $vertical-padding rem(20px);
   appearance: none;
   border: 0;

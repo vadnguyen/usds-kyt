@@ -5,7 +5,7 @@ import Label from '../../lib/components/Label';
 import Panel from '../../lib/components/Panel';
 import PrimaryButton from '../../lib/components/PrimaryButton';
 import SecondaryButton from '../../lib/components/SecondaryButton';
-import { FlexRow, FlexCol } from '../../lib/components/FlexGrid';
+import { FlexContainer, FlexRow, FlexCol } from '../../lib/components/FlexGrid';
 import styles from './styles.scss';
 
 function Home() {
@@ -17,30 +17,47 @@ function Home() {
     </div>);
 
   return (
-    <section>
-      <h1>Hello world <Label>Super!</Label></h1>
-      <p className={styles.paragraph}>
-        Welcome to the <strong>Universal React Starter-kyt</strong>.
-        This starter kyt should serve as the base for an advanced,
-        server-rendered React app.
-      </p>
-      <p className={styles.paragraph}>
-        Check out the Tools section for an outline of the libraries that
-        are used in this Starter-kyt.
-      </p>
-      <PrimaryButton>Click me</PrimaryButton>
-      <SecondaryButton>Click me</SecondaryButton>
-      <PrimaryButton padded>Click me</PrimaryButton>
-      <SecondaryButton padded>Click me</SecondaryButton>
-      <PrimaryButton block>Click me</PrimaryButton>
-      <SecondaryButton block>Click me</SecondaryButton>
+    <FlexContainer>
       <FlexRow>
         <FlexCol>
-          <Panel title="Panel title">
-            {`Hello, I'm a panel`}
+          <h1>Hello world <Label>Super!</Label></h1>
+          <p className={styles.paragraph}>
+            Welcome to the <strong>Universal React Starter-kyt</strong>.
+            This starter kyt should serve as the base for an advanced,
+            server-rendered React app.
+          </p>
+          <p className={styles.paragraph}>
+            Check out the Tools section for an outline of the libraries that
+            are used in this Starter-kyt.
+          </p>
+        </FlexCol>
+      </FlexRow>
+
+      <FlexRow>
+        <FlexCol>
+          <PrimaryButton>Click me</PrimaryButton>
+          <SecondaryButton>Click me</SecondaryButton>
+          <PrimaryButton padded>Click me</PrimaryButton>
+          <SecondaryButton padded>Click me</SecondaryButton>
+          <PrimaryButton block>Click me</PrimaryButton>
+          <SecondaryButton block>Click me</SecondaryButton>
+        </FlexCol>
+      </FlexRow>
+
+      <FlexRow>
+        <FlexCol md="4">
+          <Panel md="8" title="Unpadded panel">
+            {'Hello, I\'m an unpadded panel'}
+          </Panel>
+        </FlexCol>
+
+        <FlexCol md="4">
+          <Panel padded title="Padded panel">
+            {'Hello, I have amazing padding'}
           </Panel>
         </FlexCol>
       </FlexRow>
+
       <FlexRow>
         <FlexCol md="10" mdOffset="1" lg="6" lgOffset="0">
           <Alert
@@ -58,22 +75,26 @@ function Home() {
         </FlexCol>
       </FlexRow>
 
-      <Alert
-        type="warning"
-        title="Alert Title"
-        body={message}
-      />
-      <Alert
-        type="error"
-        title="Alert Title"
-        body={message}
-      />
-      <Alert
-        type="success"
-        title="Alert Title"
-        body={longMessage}
-      />
-    </section>
+      <FlexRow>
+        <FlexCol>
+          <Alert
+            type="warning"
+            title="Alert Title"
+            body={message}
+          />
+          <Alert
+            type="error"
+            title="Alert Title"
+            body={message}
+          />
+          <Alert
+            type="success"
+            title="Alert Title"
+            body={longMessage}
+          />
+        </FlexCol>
+      </FlexRow>
+    </FlexContainer>
   );
 }
 

@@ -2,6 +2,7 @@
 
 body {
   background: url('#{$image-path}/irs-swirl.png');
+  color: $color-black;
 }
 
 .sr {
@@ -40,7 +41,7 @@ body {
 }
 
 .nav {
-  @include font-smoothing;
+  // @include font-smoothing;
 
   text-align: right;
 

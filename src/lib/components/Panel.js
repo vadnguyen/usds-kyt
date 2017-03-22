@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import classnames from '../helpers/classnames';
 import styles from '../styles/Panel.scss';
 
 /**
@@ -7,9 +8,14 @@ import styles from '../styles/Panel.scss';
  * @param {string} title  The module's title to be displayed in an h2
  * @param {node} children required. Expected to be the text to display inside the pill
  */
-export default function Panel({ title, children }) {
+export default function Panel({ title, padded, className, children }) {
+  const style = classnames({
+    [styles.panel]: true,
+    [styles.padded]: padded,
+  });
+
   return (
-    <div className={styles.panel}>
+    <div className={classnames([style, className])}>
       <h2 className={styles.title}>{title}</h2>
       {children}
     </div>
@@ -18,5 +24,7 @@ export default function Panel({ title, children }) {
 
 Panel.propTypes = {
   title: PropTypes.string.isRequired,
+  padded: PropTypes.bool,
+  className: PropTypes.string,
   children: PropTypes.node,
 };

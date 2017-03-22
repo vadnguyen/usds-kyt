@@ -1,3 +1,16 @@
 // @import '../../lib/shared-styles/uswds';
 // @import '../../lib/styles/shared/variables';
 // @import '../../lib/styles/shared/core/base';
+
+.links {
+  background: #444;
+  padding: 20px;
+  color: #eee;
+
+  a,
+  a:visited {
+    color: #eee;
+    display: inline-block;
+    margin-right: 1em;
+  }
+}

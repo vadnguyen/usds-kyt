@@ -3,14 +3,27 @@
 .panel {
   background: white;
   border: solid 1px $color-gray-lighter;
+  font-family: $font-sans;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  margin: $module-padding 0;
 
   .title {
-    margin-bottom: baselines(1);
+    margin-bottom: baselines(0.5);
     font-family: $font-sans;
-    font-weight: $font-normal;
+    font-weight: $font-bold;
     font-size: $h3-font-size;
+    line-height: $heading-line-height;
     padding-top: $module-padding;
     padding-left: $module-padding;
     padding-right: $module-padding;
+  }
+}
+
+.padded {
+  padding: $module-padding;
+
+  .title {
+    padding: 0;
   }
 }
