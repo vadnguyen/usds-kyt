@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 import classnames from '../helpers/classnames';
-import styles from '../styles/PrimaryButton.scss';
+import styles from '../styles/SecondaryButton.scss';
 
 /**
- * The PrimaryButton component shows a button with a blue background.
+ * The SecondaryButton component shows a button with white background and blue border.
  * @returns {node} The rendered DOM node
  * @param {string} type required. Defaults to 'button'. HTML button type.
  * Must be 'button', 'submit' or 'reset'
@@ -12,9 +12,9 @@ import styles from '../styles/PrimaryButton.scss';
  * @param {func} handleClick The function to be run when the button is clicked
  * @param {node} children required. Expected to be the text to display inside the button
  */
-export default function PrimaryButton({ type, padded, block, handleClick, children }) {
+export default function SecondaryButton({ type, padded, block, handleClick, children }) {
   const buttonClassName = classnames({
-    [styles.primaryButton]: true,
+    [styles.secondaryButton]: true,
     [styles.block]: block,
     [styles.padded]: padded,
   });
@@ -26,14 +26,18 @@ export default function PrimaryButton({ type, padded, block, handleClick, childr
   );
 }
 
-PrimaryButton.propTypes = {
-  type: PropTypes.string,
+SecondaryButton.propTypes = {
+  type: PropTypes.oneOf([
+    'button',
+    'submit',
+    'reset',
+  ]).isRequired,
   block: PropTypes.bool,
   padded: PropTypes.bool,
   handleClick: PropTypes.func,
   children: PropTypes.node.isRequired,
 };
 
-PrimaryButton.defaultProps = {
+SecondaryButton.defaultProps = {
   type: 'button',
 };
