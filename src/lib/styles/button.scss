@@ -1,0 +1,36 @@
+@import './shared/variables';
+
+.btn {
+  margin-right: 10px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: ($input-padding-vertical + $input-border-width) 20px;
+  appearance: none;
+  border: 0;
+  border-radius: $border-radius;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-sans;
+  font-size: $base-font-size;
+  font-weight: $font-bold;
+  line-height: $input-line-height;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  background-color: $color-primary;
+  color: $color-white;
+
+  &:hover {
+    background-color: $color-primary-darker;
+  }
+
+  &:active {
+    background-color: $color-blue-darkest;
+  }
+
+  &:focus {
+    box-shadow: $focus-shadow
+    // background-color: $color-blue-dark
+  }
+}

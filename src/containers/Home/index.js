@@ -2,6 +2,8 @@
 import React from 'react';
 import Alert from '../../lib/components/Alert';
 import Label from '../../lib/components/Label';
+// import Button from '../../lib/components/Button';
+import PrimaryButton from '../../lib/components/PrimaryButton';
 import { FlexRow, FlexCol } from '../../lib/components/FlexGrid';
 import styles from './styles.scss';
 
@@ -25,6 +27,7 @@ function Home() {
         Check out the Tools section for an outline of the libraries that
         are used in this Starter-kyt.
       </p>
+      <PrimaryButton>Click me</PrimaryButton>
       <FlexRow>
         <FlexCol md="10" mdOffset="1" lg="6" lgOffset="0">
           <Alert

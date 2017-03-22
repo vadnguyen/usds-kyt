@@ -105,6 +105,12 @@ $color-focus:                #3e94cf !default;
 $color-visited:              #4c2c92 !default;
 $color-shadow:               rgba(#000, 0.3) !default;
 
+// Input sizes
+$input-line-height:      1.25 !default;
+$input-border-width:     1px !default;
+$input-padding-vertical: 10px !default;
+$input-max-width:        46rem !default;
+
 // Magic Numbers
 $text-max-width:      35em !default;
 $lead-max-width:      50em !default;
