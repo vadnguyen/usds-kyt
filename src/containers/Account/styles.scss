@@ -1,6 +1,104 @@
 
-@import '../../shared-styles/variables';
+@import '../../lib/styles/shared/variables';
 
-.tool + .tool {
-  padding-top: 5px;
+.topRow {
+  min-height: rem(262px);
+  padding: em(30px);
+  padding-bottom: $module-padding * 1.5;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+}
+.date {
+  font-size: $h3-font-size;
+  line-height: $heading-line-height;
+  text-align: center;
+}
+
+.baldue {
+  font-size: 48px;
+  line-height: $heading-line-height;
+  font-weight: $font-bold;
+  text-align: center;
+}
+
+.notSure {
+  display: block;
+  margin: baselines(0.25) 0;
+  text-align: center;
+  font-size: $h6-font-size;
+  color: $color-primary;
+
+  &:visited {
+    color: $color-primary;
+  }
+}
+
+.penalties {
+  font-size: $h4-font-size;
+  line-height: $heading-line-height;
+  text-align: center;
+  font-weight: $font-bold;
+  margin: baselines(0.5) 0;
+}
+
+.finePrint {
+  font-size: $h6-font-size;
+  text-align: center;
+
+  p {
+    margin: baselines(0.25);
+    line-height: $base-line-height;
+  }
+
+  ul {
+    display: block;
+    margin: 0 auto;
+    max-width: em(225px, $h6-font-size);
+    text-align: left;
+    list-style-type: disc;
+  }
+}
+
+.finePrintButton {
+  display: inline;
+  padding: 0;
+  margin: 0 0 0 8px;
+  appearance: none;
+  border: none;
+  background: none;
+  outline: none;
+  background-position-x: right;
+  color: $color-primary;
+  text-align: left;
+  font-size: 1em;
+  line-height: $base-line-height;
+  left: 0;
+  text-decoration: underline;
+  top: 0;
+  cursor: pointer;
+
+  &::after {
+    position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    content: '';
+    display: inline-block;
+    height: rem(10px);
+    width: rem(10px);
+    margin-left: rem(4px);
+    background-position-y: 1px;
+  }
+
+  &[aria-expanded=false] {
+    &::after {
+      background-image: url('../../lib/assets/images/angle-arrow-down-primary.svg');
+    }
+  }
+
+  &[aria-expanded=true] {
+    &::after {
+      background-image: url('../../lib/assets/images/angle-arrow-up-primary.svg');
+    }
+  }
 }

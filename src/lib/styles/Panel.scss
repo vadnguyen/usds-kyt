@@ -1,12 +1,13 @@
 @import './shared/variables';
 
 .panel {
+  box-sizing: border-box;
   background: white;
   border: solid 1px $color-gray-lighter;
   font-family: $font-sans;
   font-size: $base-font-size;
   line-height: $base-line-height;
-  margin: $module-padding 0;
+  margin-top: $module-padding;
 
   .title {
     margin-bottom: baselines(0.5);

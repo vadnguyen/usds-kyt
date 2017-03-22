@@ -1,8 +1,12 @@
+@import '../../lib/styles/shared/variables';
+
 .bitty {
   font-size: 13px;
 }
 
 .paymentOptions {
+  min-height: rem(262px);
+
   button:last-of-type {
     margin-bottom: 0;
   }

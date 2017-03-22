@@ -14,16 +14,18 @@ export default function Panel({ title, padded, className, children }) {
     [styles.padded]: padded,
   });
 
+  const titleNode = <h2 className={styles.title}>{title}</h2>;
+
   return (
     <div className={classnames([style, className])}>
-      <h2 className={styles.title}>{title}</h2>
+      {titleNode !== '' ? titleNode : null}
       {children}
     </div>
   );
 }
 
 Panel.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   padded: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node,
