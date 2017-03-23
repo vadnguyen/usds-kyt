@@ -19,6 +19,11 @@ const importAccount = (nextState, cb) => {
     .then(module => cb(null, module.default))
     .catch((e) => { throw e; });
 };
+const importNotSureYouOwe = (nextState, cb) => {
+  System.import('../containers/NotSureYouOwe')
+    .then(module => cb(null, module.default))
+    .catch((e) => { throw e; });
+};
 
 // We use `getComponent` to dynamically load routes.
 // https://github.com/reactjs/react-router/blob/master/docs/guides/DynamicRouting.md
@@ -26,6 +31,7 @@ const routes = (
   <Route path="/" component={App}>
     <IndexRoute getComponent={importHome} />
     <Route path="account" getComponent={importAccount} />
+    <Route path="notsure" getComponent={importNotSureYouOwe} />
   </Route>
 );
 

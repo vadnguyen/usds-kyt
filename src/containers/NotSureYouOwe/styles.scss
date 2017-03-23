@@ -1,0 +1,39 @@
+@import '../../lib/styles/shared/variables';
+
+.infoPage {
+  h1 {
+    font-size: $h1-font-size;
+    font-weight: $font-bold;
+    line-height: $heading-line-height;
+  }
+
+  section {
+    margin: baselines(2) 0;
+    padding-top: baselines(1);
+    border-top: solid 1px $color-gray-light;
+
+    &:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+  }
+
+  h2 {
+    margin: baselines(1) 0;
+    font-size: $h2-font-size;
+  }
+
+  h3 {
+    margin-top: baselines(1.5);
+    margin-bottom: baselines(0.25);
+    font-size: $h3-font-size;
+    font-weight: $font-bold;
+  }
+
+  p {
+    margin: baselines(0.25) 0;
+    line-height: $base-line-height;
+    max-width: 40em;
+  }
+}
