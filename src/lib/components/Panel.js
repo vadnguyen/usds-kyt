@@ -14,11 +14,11 @@ export default function Panel({ title, padded, className, children }) {
     [styles.padded]: padded,
   });
 
-  const titleNode = <h2 className={styles.title}>{title}</h2>;
-
   return (
     <div className={classnames([style, className])}>
-      {titleNode !== '' ? titleNode : null}
+      {title
+        ? <h2 className={styles.title}>{title}</h2>
+        : null}
       {children}
     </div>
   );
