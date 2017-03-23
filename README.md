@@ -1,12 +1,12 @@
 # USDA kyt
 
-### TL;DR for dev
+## TL;DR for dev
 1. Run `npm install`
 2. Then run `npm run dev`
 3. View your app @ `http://localhost:3000`
 
 
-### Uses kyt
+## Uses kyt
 This project use's [kyt](https://github.com/NYTimes/kyt)'s [Universal React starter-kyt](https://github.com/NYTimes/kyt/tree/master/packages/kyt-starter-universal) as the build system.
 
 - [Express](https://expressjs.com/) - Server-side rendering
@@ -16,7 +16,7 @@ This project use's [kyt](https://github.com/NYTimes/kyt)'s [Universal React star
 - [Enzyme](https://github.com/airbnb/enzyme) - React component testing
 
 
-### Available script commands
+## Available script commands
 Using `npm run`:
 
 * [`dev`](https://github.com/NYTimes/kyt/blob/master/docs/commands.md#dev) starts a development environment
