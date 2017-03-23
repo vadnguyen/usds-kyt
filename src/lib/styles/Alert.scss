@@ -62,7 +62,6 @@ $alerts: map-merge($usa-alerts, $usa-custom-alerts);
 .usa-alert-heading {
   margin-bottom: baselines(0.25);
   margin-top: 0;
-  font-family: $font-sans;
   font-weight: $font-bold;
   font-size: $h3-font-size;
   line-height: 1.3;
@@ -71,8 +70,7 @@ $alerts: map-merge($usa-alerts, $usa-custom-alerts);
 .usa-alert-text {
   margin-bottom: 0;
   margin-top: 0;
-  font-family: $font-sans;
-  font-size: $base-font-size;
+  font-size: $h5-font-size;
   line-height: $base-line-height;
   max-width: em(700px);
 

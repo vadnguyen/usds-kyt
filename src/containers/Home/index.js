@@ -6,6 +6,7 @@ import Panel from '../../lib/components/Panel';
 import PrimaryButton from '../../lib/components/PrimaryButton';
 import SecondaryButton from '../../lib/components/SecondaryButton';
 import { FlexContainer, FlexRow, FlexCol } from '../../lib/components/FlexGrid';
+import { Table, TableRow, TableHeaderCell, TableCell } from '../../lib/components/Tables';
 import styles from './styles.scss';
 
 function Home() {
@@ -98,6 +99,28 @@ function Home() {
             title="Alert Title"
             body={longMessage}
           />
+        </FlexCol>
+      </FlexRow>
+
+      <FlexRow>
+        <FlexCol xs="12">
+          <h2 className={styles.componentHeader}>Tables</h2>
+        </FlexCol>
+        <FlexCol>
+          <Table columns={['Title', 'Foo', 'Bear']}>
+            <TableRow>
+              <TableCell>Happy happy</TableCell>
+              <TableCell>joy joy</TableCell>
+              <TableCell>song</TableCell>
+            </TableRow>
+          </Table>
+          <Table borderless columns={['Title', 'Foo', 'Bear']}>
+            <TableRow>
+              <TableCell>Happy happy</TableCell>
+              <TableCell>joy joy</TableCell>
+              <TableCell>song</TableCell>
+            </TableRow>
+          </Table>
         </FlexCol>
       </FlexRow>
     </FlexContainer>

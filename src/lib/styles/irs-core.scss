@@ -1,0 +1,54 @@
+@import './shared/variables';
+@import './core/reset';
+@import './core/normalize';
+@import './core/fonts';
+
+// Apply a natural box layout model to all elements, but allowing components to
+// change
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: $color-gray-lightest url('#{$image-path}/irs-swirl.png');
+  overflow-x: hidden;
+  font-family: $font-sans;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $color-black;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: underline;
+
+
+  &:hover {
+    color: $color-primary-darker;
+  }
+
+  &:focus {
+    box-shadow: $focus-shadow;
+    outline: solid 1px rgba($color-focus, 0.5);
+  }
+}
+
+// Hack for clearfixes
+.lt-ie9 {
+  * {
+    filter: none !important; /* stylelint-disable-line declaration-no-important */
+  }
+}
+
+// for IE < 11, see:
+// <http://caniuse.com/#feat=hidden>
+[hidden] {
+  display: none !important; /* stylelint-disable-line declaration-no-important */
+}

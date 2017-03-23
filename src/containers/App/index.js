@@ -1,9 +1,10 @@
 
 import React, { PropTypes } from 'react';
 import Link from 'react-router/lib/Link';
-import { FlexContainer, FlexRow, FlexCol } from '../../lib/components/FlexGrid';
+// import { FlexContainer, FlexRow, FlexCol } from '../../lib/components/FlexGrid';
 import OfficialSiteBannerNew from '../../lib/components/OfficialSiteBannerNew';
 import IrsHeader from '../../lib/components/IrsHeader';
+import '../../lib/styles/irs-core.scss';
 import styles from './styles.scss';
 
 function App({ children }) {

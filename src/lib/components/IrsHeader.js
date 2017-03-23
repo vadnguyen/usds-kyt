@@ -7,7 +7,7 @@ export default function IrsHeader(props) {
   return (
     <header className={styles.irsHeader}>
       <FlexContainer role="banner">
-        <FlexRow justify="between">
+        <FlexRow align="center" justify="between">
           <FlexCol xs="2">
             <a className={styles.irsLogo} href="" aria-label="Return to the main view">
               <img src={irsLogo} alt="" />
