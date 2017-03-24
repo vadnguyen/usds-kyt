@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'react-router/lib/Link';
 import { FlexContainer, FlexRow, FlexCol } from '../../lib/components/FlexGrid';
 import Panel from '../../lib/components/Panel';
+import ExternalLink from '../../lib/components/ExternalLink';
 import { Breadcrumbs, Breadcrumb } from '../../lib/components/Breadcrumbs';
 import styles from './styles.scss';
 
@@ -30,7 +31,7 @@ export default function NotSureYouOwe() {
                 {'If you file your tax return and then realize you made a mistake, you can amend the return.'}
               </p>
               <p>
-                <Link>{'https://taxpayeradvocate.irs.gov/get-help/amending-a-return'}</Link>
+                <ExternalLink href="https://taxpayeradvocate.irs.gov/get-help/amending-a-return">{'https://taxpayeradvocate.irs.gov/get-help/amending-a-return'}</ExternalLink>
               </p>
 
               <h3>Penalty Abatement</h3>
@@ -107,11 +108,64 @@ export default function NotSureYouOwe() {
               </p>
               <blockquote>
                 <h4>Contact us</h4>
-
                 <p>
                   {'We provide our contact phone number on the top right-hand corner of the notice or letter. Typically, you only need to contact us if you don’t agree with the information, if we requested additional information, or if you have a balance due. You can also write to us at the address in the notice or letter. If you write, allow at least 30 days for our response.'}
                 </p>
               </blockquote>
+              <p>
+                <Link>{'https://www.irs.gov/individuals/understanding-your-irs-notice-or-letter?_ga=1.9028405.1649112403.1474668304'}</Link>
+              </p>
+
+              <h3>Search Individual Notices and Letters</h3>
+              <p>
+                <Link>{'https://www.irs.gov/individuals/irs-notice-or-letter-for-individual-filers'}</Link>
+              </p>
+
+              <h3>Search Business Notices and Letters</h3>
+              <p>
+                <Link>{'https://www.irs.gov/individuals/irs-notice-or-letter-for-business-filers'}</Link>
+              </p>
+
+              <h3>Online Tools for Individual Taxpayers</h3>
+              <p>
+                {'Includes: Get Transcript, Free File, Online Payment Agreement Office in Compromise Pre-Qualifier and Taxpayer Assistance Center Locator, and more.'}
+              </p>
+              <p>
+                <Link>{'https://www.irs.gov/help-resources/tools'}</Link>
+              </p>
+
+              <h3>Interactive Tax Assistant (ITA)</h3>
+              <p>
+                {'A tax law resource that takes you through a series of questions and provides you with responses to tax law questions.'}
+              </p>
+              <p>
+                <Link>{'https://www.irs.gov/uac/interactive-tax-assistant-ita-1'}</Link>
+              </p>
+            </section>
+
+            <section>
+              <h2>Did Not Find Your Answer?</h2>
+
+              <h3>Call a Customer Service Representative</h3>
+              <p>
+                {'If you did not find guidance on your next step you may call a representative. You should have your information ready, including your tax return information.'}
+              </p>
+              <p>
+                <Link>{'https://www.irs.gov/help-resources/telephone-assistance'}</Link>
+              </p>
+
+              <h3>Submit a Freedom of Information Act request</h3>
+              <p>
+                {'Submit a FOIA (Freedom of Information Act) request to obtain the following:'}
+              </p>
+              <ul>
+                <li>Your Audit Report form</li>
+                <li>Your Work Papers</li>
+                <li>Your Notices</li>
+              </ul>
+              <p>
+                <Link>{'https://www.irs.gov/uac/irs-freedom-of-information?_ga=1.209824021.1649112403.1474668304'}</Link>
+              </p>
             </section>
           </Panel>
         </FlexCol>

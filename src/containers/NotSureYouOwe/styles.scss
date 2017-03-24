@@ -36,4 +36,15 @@
     line-height: $base-line-height;
     max-width: 40em;
   }
+
+  blockquote {
+    margin: baselines(1) 0;
+    padding: $module-padding;
+    font-size: $h5-font-size;
+    border: solid 1px $color-gray-lighter;
+
+    h4 {
+      font-size: $h3-font-size;
+    }
+  }
 }
