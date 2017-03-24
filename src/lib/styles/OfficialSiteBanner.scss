@@ -1,14 +1,14 @@
 @import './shared/variables';
 
-$font-size: $h6-font-size;
-$font-size-mobile: 12px;
+$font-size: 12px;
 
-.usa-banner {
+.wrapper {
   background-color: $color-gray-lightest;
-  padding-bottom: em(15px);
+  padding-bottom: em(25px, $font-size);
   font-family: $font-sans;
   line-height: $base-line-height;
-  font-size: $font-size-mobile;
+  font-weight: $font-normal;
+  font-size: $font-size;
 
   @include media-breakpoint-up(sm) {
     padding-bottom: 0;
@@ -16,75 +16,48 @@ $font-size-mobile: 12px;
   }
 }
 
-.usa-banner-content {
-  padding-bottom: em(3px, $font-size);
-  background-color: transparent;
-  font-size: $h5-font-size;
+.banner {
   padding-top: em(10px, $font-size);
-  width: 100%;
 
   @include media-breakpoint-up(sm) {
-    padding-bottom: em(20px, $font-size);
+    padding: em(4px, $font-size) 0;
+    // padding-bottom: em(3px, $font-size);
   }
 }
 
-// .usa-banner-inner {
-//   // @include outer-container();
-//   padding-left: $site-margins-mobile;
-//   padding-right: $site-margins-mobile;
-//   max-width: $site-max-width;
-//
-//   @include media-breakpoint-up(lg) {
-//     padding-left: $site-margins;
-//     padding-right: $site-margins;
-//   }
-// }
+.bannerText {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: em(30px, $font-size);
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
 
-.usa-banner-header {
-  padding: rem(5px) 0;
-  font-size: 1em;
-  font-weight: $font-normal;
+  &::before {
+    content: '';
+    width: em(18px, $font-size);
+    height: em(18px, $font-size);
+    background: url('#{$image-path}/us-flag-icon.svg') no-repeat 0 0;
+    background-size: em(18px, $font-size);
+    position: absolute;
+    left: em(18px, $font-size);
+  }
 
   @include media-breakpoint-up(sm) {
-    padding: 0;
-  }
-
-  p {
-    margin-top: 0;
-    margin-bottom: 0;
-    display: inline;
-    overflow: hidden;
+    // margin-top: em(3px, $font-size);
+    // margin-bottom: em(3px, $font-size);
     vertical-align: middle;
-
-    @include media-breakpoint-up(sm) {
-      margin-top: 2px;
-      margin-bottom: 2px;
-      display: inline-block;
-    }
-  }
-
-  img {
-    // float: left;
-    display: inline;
-    vertical-align: middle;
-    margin-right: rem(10px);
-    margin-top: 1px;
-    width: em(24px, $font-size);
-
-    @include media-breakpoint-up(sm) {
-      margin-right: rem(7px);
-      width: rem(20px);
-    }
+    display: inline-block;
   }
 }
 
 .expanded {
   // align-items: center;
   border-bottom: 1px solid $color-gray-light;
-  display: flex;
-  font-size: $h5-font-size;
-  min-height: rem(56px);
-  padding-right: rem(30px);
+  // display: flex;
+  // font-size: $h5-font-size;
+  min-height: em(50px, $font-size);
+  padding-right: rem(50px);
 
   @include media-breakpoint-up(sm) {
     border-bottom: none;
@@ -95,17 +68,9 @@ $font-size-mobile: 12px;
     padding-right: 0;
   }
 
-  // img {
-  //   margin-right: rem(24px);
-  // 
-  //   @include media-breakpoint-up(sm) {
-  //     margin-right: rem(7px);
-  //   }
-  // }
-
-  p {
-    line-height: $heading-line-height;
-    vertical-align: top;
+  .bannerText {
+    // line-height: $heading-line-height;
+    // vertical-align: top;
 
     @include media-breakpoint-up(sm) {
       line-height: $base-line-height;
@@ -120,8 +85,8 @@ $font-size-mobile: 12px;
   background: none;
   outline: none;
   vertical-align: middle;
-  padding-top: em(13px, $font-size-mobile);
-  padding-left: em(48px, $font-size-mobile);
+  padding-top: em(18px, $font-size);
+  padding-left: em(45px, $font-size);
   background-position-x: right;
   color: $color-primary;
   text-align: left;
@@ -185,7 +150,7 @@ $font-size-mobile: 12px;
     &::after {
       position: absolute;
       right: rem(15px);
-      top: rem(21.5px);
+      top: rem(12px);
 
       @include media-breakpoint-up(sm) {
         position: static;
@@ -202,10 +167,16 @@ $font-size-mobile: 12px;
   }
 }
 
-.usa-banner-icon {
-  width: rem(38px);
-  float: left;
-  margin-right: rem(10px);
+.content {
+  padding-bottom: em(3px, $font-size);
+  background-color: transparent;
+  font-size: $h5-font-size;
+  padding-top: em(10px, $font-size);
+  width: 100%;
+
+  @include media-breakpoint-up(sm) {
+    padding-bottom: em(20px, $font-size);
+  }
 }
 
 .usa-banner-textblock {
@@ -215,4 +186,10 @@ $font-size-mobile: 12px;
 
 .usa-banner-content-group {
   padding-top: rem(20px);
+
+  img {
+    width: rem(38px);
+    float: left;
+    margin-right: rem(10px);
+  }
 }

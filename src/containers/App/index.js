@@ -2,7 +2,7 @@
 import React, { PropTypes } from 'react';
 import Link from 'react-router/lib/Link';
 // import { FlexContainer, FlexRow, FlexCol } from '../../lib/components/FlexGrid';
-import OfficialSiteBannerNew from '../../lib/components/OfficialSiteBannerNew';
+import OfficialSiteBanner from '../../lib/components/OfficialSiteBanner';
 import IrsHeader from '../../lib/components/IrsHeader';
 import '../../lib/styles/irs-core.scss';
 import styles from './styles.scss';
@@ -16,7 +16,7 @@ function App({ children }) {
         <Link to="/account">Account</Link>
       </div>
 
-      <OfficialSiteBannerNew />
+      <OfficialSiteBanner />
       <IrsHeader />
       {children}
     </div>

@@ -2,7 +2,9 @@ import React from 'react';
 import { FlexContainer, FlexRow, FlexCol } from './FlexGrid';
 import iconDotGov from '../assets/images/icon-dot-gov.svg';
 import iconHttps from '../assets/images/icon-https.svg';
-import iconFlag from '../assets/images/favicons/favicon-57.png';
+// import iconFlag from '../assets/images/us-flag-icon.svg';
+// import iconFlag from '../assets/images/favicons/favicon-57.png';
+
 import styles from '../styles/OfficialSiteBanner.scss';
 
 /**
@@ -49,12 +51,11 @@ export default class OfficialSiteBanner extends React.Component {
       return '';
     }
     return (
-      <div className={styles['usa-banner-content']} id="gov-banner">
+      <div className={styles.content} id="gov-banner">
         <FlexRow>
           <FlexCol md="6" xl="5">
             <div className={styles['usa-banner-content-group']}>
               <img
-                className={styles['usa-banner-icon']}
                 src={iconDotGov} alt="Dot gov"
               />
               <div className={styles['usa-banner-textblock']}>
@@ -72,7 +73,6 @@ export default class OfficialSiteBanner extends React.Component {
           <FlexCol md="6" xl="5">
             <div className={styles['usa-banner-content-group']}>
               <img
-                className={styles['usa-banner-icon']}
                 src={iconHttps}
                 alt="SSL"
               />
@@ -100,13 +100,15 @@ export default class OfficialSiteBanner extends React.Component {
    */
   render() {
     return (
-      <div className={styles['usa-banner']}>
+      <div className={styles.wrapper}>
         <FlexContainer>
           <FlexRow>
             <FlexCol className={this.state.contentVisible ? styles.expanded : null}>
-              <header className={styles['usa-banner-header']}>
-                <img src={iconFlag} alt="U.S. Flag" />
-                <p>An official website of the United States government</p>
+              <header className={styles.banner}>
+                {/* <img src={iconFlag} alt="U.S. Flag" /> */}
+                <p className={styles.bannerText}>
+                  An official website of the United States government
+                </p>
                 <button
                   className={styles['usa-banner-button']}
                   aria-expanded={this.state.contentVisible} aria-controls="gov-banner"
