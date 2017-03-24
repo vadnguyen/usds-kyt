@@ -28,7 +28,7 @@ function Home() {
             {'This is a stratch pad and visual inventory for our components as they are developed. Add the stuff you make to this page for a quick visual inventory of what is done.'}
           </p>
           <p className={styles.p}>
-            {'You\'ll notice that this paragraph is in generic sans. There is no base styling for this page to make it easier for you to ensure the Sass you\'re writing doesn\'t rely on any inherited styles.'}
+            {'Base styling as been added at the App component level that sets the basics like the font-family, default font-size and color.'}
           </p>
         </FlexCol>
       </FlexRow>
