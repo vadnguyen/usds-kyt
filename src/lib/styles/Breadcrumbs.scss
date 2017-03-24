@@ -1,0 +1,25 @@
+@import './shared/variables';
+
+.breadcrumbs {
+  display: block;
+  margin: baselines(1) 0;
+  font-size: $h5-font-size;
+  line-height: $heading-line-height;
+  color: $color-gray-dark;
+}
+
+.breadcrumb {
+  display: inline;
+
+  &::after {
+    display: inline;
+    content: '/';
+    padding: 0 0.5em;
+  }
+
+  &:last-of-type {
+    &::after {
+      display: none;
+    }
+  }
+}

@@ -6,7 +6,9 @@ import Panel from '../../lib/components/Panel';
 import PrimaryButton from '../../lib/components/PrimaryButton';
 import SecondaryButton from '../../lib/components/SecondaryButton';
 import { FlexContainer, FlexRow, FlexCol } from '../../lib/components/FlexGrid';
-import { Table, TableRow, TableHeaderCell, TableCell } from '../../lib/components/Tables';
+import { Table, TableRow, TableCell } from '../../lib/components/Tables';
+import { Breadcrumbs, Breadcrumb } from '../../lib/components/Breadcrumbs';
+
 import styles from './styles.scss';
 
 function Home() {
@@ -36,6 +38,23 @@ function Home() {
           <h2 className={styles.componentHeader}>Label</h2>
           <Label>Super!</Label>
           <Label size="big">Super duper!</Label>
+        </FlexCol>
+      </FlexRow>
+
+      <FlexRow>
+        <FlexCol>
+          <h2 className={styles.componentHeader}>Breadcrumbs</h2>
+          <Breadcrumbs>
+            <Breadcrumb>
+              <a href="">Home</a>
+            </Breadcrumb>
+            <Breadcrumb>
+              <a href="">Puppies</a>
+            </Breadcrumb>
+            <Breadcrumb>
+              Pembroke Welsh Corgi
+            </Breadcrumb>
+          </Breadcrumbs>
         </FlexCol>
       </FlexRow>
 
