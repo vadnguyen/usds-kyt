@@ -23,7 +23,7 @@ export default function NotSureYouOwe() {
 
           <h1>Not Sure You Owe This Amount?</h1>
 
-          <Panel padded>
+          <Panel padding="extra">
             <section>
               <h2>You Received the Notice But Don’t Agree With the Balance</h2>
               <h3>Refund Claim/Amended Return</h3>
@@ -31,7 +31,9 @@ export default function NotSureYouOwe() {
                 {'If you file your tax return and then realize you made a mistake, you can amend the return.'}
               </p>
               <p>
-                <ExternalLink href="https://taxpayeradvocate.irs.gov/get-help/amending-a-return">{'https://taxpayeradvocate.irs.gov/get-help/amending-a-return'}</ExternalLink>
+                <ExternalLink href="https://taxpayeradvocate.irs.gov/get-help/amending-a-return">
+                  {'https://taxpayeradvocate.irs.gov/get-help/amending-a-return'}
+                </ExternalLink>
               </p>
 
               <h3>Penalty Abatement</h3>
@@ -39,7 +41,9 @@ export default function NotSureYouOwe() {
                 {'In some cases, after the tax is paid the IRS will waive the penalties for filing and paying late. However, you’ll need to ask the IRS to do this.'}
               </p>
               <p>
-                <Link>{'https://taxpayeradvocate.irs.gov/get-help/consequences-of-not-filing'}</Link>
+                <ExternalLink href="https://taxpayeradvocate.irs.gov/get-help/consequences-of-not-filing">
+                  {'https://taxpayeradvocate.irs.gov/get-help/consequences-of-not-filing'}
+                </ExternalLink>
               </p>
 
               <h3>Injured Spouse</h3>
@@ -47,7 +51,9 @@ export default function NotSureYouOwe() {
                 {'If you filed a joint return and you\'re not responsible for your spouse\'s debt, you\'re entitled to request your portion of the refund back from the IRS.'}
               </p>
               <p>
-                <Link>{'https://taxpayeradvocate.irs.gov/get-help/consequences-of-not-filing'}</Link>
+                <ExternalLink href="https://taxpayeradvocate.irs.gov/get-help/consequences-of-not-filing">
+                  {'https://taxpayeradvocate.irs.gov/get-help/consequences-of-not-filing'}
+                </ExternalLink>
               </p>
 
               <h3>Innocent Spouse</h3>
@@ -55,7 +61,9 @@ export default function NotSureYouOwe() {
                 {'Many married taxpayers choose to file a joint tax return because of certain benefits this filing status allows them.  Joint and several liability means that each taxpayer is legally responsible for the entire liability. You may have filed jointly and now wish to request relief from being jointly and severally liable.'}
               </p>
               <p>
-                <Link>{'https://www.irs.gov/taxtopics/tc205.html'}</Link>
+                <ExternalLink href="https://www.irs.gov/taxtopics/tc205.html">
+                  {'https://www.irs.gov/taxtopics/tc205.html'}
+                </ExternalLink>
               </p>
 
               <h3>Identity Theft</h3>
@@ -63,7 +71,9 @@ export default function NotSureYouOwe() {
                 {'If you believe you have been a victim of identity theft here’s what you need to do. '}
               </p>
               <p>
-                <Link>{'https://www.irs.gov/uac/taxpayer-guide-to-identity-theft'}</Link>
+                <ExternalLink href="https://www.irs.gov/uac/taxpayer-guide-to-identity-theft">
+                  {'https://www.irs.gov/uac/taxpayer-guide-to-identity-theft'}
+                </ExternalLink>
               </p>
 
               <h3>Audit Reconsideration</h3>
@@ -71,7 +81,9 @@ export default function NotSureYouOwe() {
                 {'You got a notice from the IRS saying your tax return was audited (or the IRS created a return for you) and you owe taxes, and you disagree with the tax the IRS says that you owe.'}
               </p>
               <p>
-                <Link>{'https://taxpayeradvocate.irs.gov/get-help/audit-reconsiderations'}</Link>
+                <ExternalLink href="https://taxpayeradvocate.irs.gov/get-help/audit-reconsiderations">
+                  {'https://taxpayeradvocate.irs.gov/get-help/audit-reconsiderations'}
+                </ExternalLink>
               </p>
 
               <h3>Doubt as to Liability, Offer in Compromises(OICs)</h3>
@@ -79,7 +91,9 @@ export default function NotSureYouOwe() {
                 {'If you can’t pay your full tax debt, or if paying it all would create a financial hardship for you, an offer in compromise (OIC) may be an option. An OIC is an agreement between you and the IRS, where the IRS agrees to accept less than the full amount you owe.'}
               </p>
               <p>
-                <Link>{'https://taxpayeradvocate.irs.gov/get-help/offers-in-compromise'}</Link>
+                <ExternalLink href="https://taxpayeradvocate.irs.gov/get-help/offers-in-compromise">
+                  {'https://taxpayeradvocate.irs.gov/get-help/offers-in-compromise'}
+                </ExternalLink>
               </p>
 
               <h3>Preparer Issues</h3>
@@ -87,7 +101,9 @@ export default function NotSureYouOwe() {
                 {'If you need help finding a preparer or reporting preparer fraud, find guidance here.'}
               </p>
               <p>
-                <Link>{'https://www.irs.gov/taxtopics/tc254.html'}</Link>
+                <ExternalLink href="https://www.irs.gov/taxtopics/tc254.html">
+                  {'https://www.irs.gov/taxtopics/tc254.html'}
+                </ExternalLink>
               </p>
             </section>
 
@@ -96,7 +112,9 @@ export default function NotSureYouOwe() {
 
               <h3>I Got a Notice/ I Lost My Notice</h3>
               <p>
-                <Link>{'https://taxpayeradvocate.irs.gov/get-help/letter-from-the-irs'}</Link>
+                <ExternalLink href="https://taxpayeradvocate.irs.gov/get-help/letter-from-the-irs">
+                  {'https://taxpayeradvocate.irs.gov/get-help/letter-from-the-irs'}
+                </ExternalLink>
               </p>
             </section>
             <section>
@@ -113,17 +131,23 @@ export default function NotSureYouOwe() {
                 </p>
               </blockquote>
               <p>
-                <Link>{'https://www.irs.gov/individuals/understanding-your-irs-notice-or-letter?_ga=1.9028405.1649112403.1474668304'}</Link>
+                <ExternalLink href="https://www.irs.gov/individuals/understanding-your-irs-notice-or-letter?_ga=1.9028405.1649112403.1474668304">
+                  {'https://www.irs.gov/individuals/understanding-your-irs-notice-or-letter?_ga=1.9028405.1649112403.1474668304'}
+                </ExternalLink>
               </p>
 
               <h3>Search Individual Notices and Letters</h3>
               <p>
-                <Link>{'https://www.irs.gov/individuals/irs-notice-or-letter-for-individual-filers'}</Link>
+                <ExternalLink href="https://www.irs.gov/individuals/irs-notice-or-letter-for-individual-filers">
+                  {'https://www.irs.gov/individuals/irs-notice-or-letter-for-individual-filers'}
+                </ExternalLink>
               </p>
 
               <h3>Search Business Notices and Letters</h3>
               <p>
-                <Link>{'https://www.irs.gov/individuals/irs-notice-or-letter-for-business-filers'}</Link>
+                <ExternalLink href="https://www.irs.gov/individuals/irs-notice-or-letter-for-business-filers">
+                  {'https://www.irs.gov/individuals/irs-notice-or-letter-for-business-filers'}
+                </ExternalLink>
               </p>
 
               <h3>Online Tools for Individual Taxpayers</h3>
@@ -131,7 +155,9 @@ export default function NotSureYouOwe() {
                 {'Includes: Get Transcript, Free File, Online Payment Agreement Office in Compromise Pre-Qualifier and Taxpayer Assistance Center Locator, and more.'}
               </p>
               <p>
-                <Link>{'https://www.irs.gov/help-resources/tools'}</Link>
+                <ExternalLink href="https://www.irs.gov/help-resources/tools">
+                  {'https://www.irs.gov/help-resources/tools'}
+                </ExternalLink>
               </p>
 
               <h3>Interactive Tax Assistant (ITA)</h3>
@@ -139,7 +165,9 @@ export default function NotSureYouOwe() {
                 {'A tax law resource that takes you through a series of questions and provides you with responses to tax law questions.'}
               </p>
               <p>
-                <Link>{'https://www.irs.gov/uac/interactive-tax-assistant-ita-1'}</Link>
+                <ExternalLink href="https://www.irs.gov/uac/interactive-tax-assistant-ita-1">
+                  {'https://www.irs.gov/uac/interactive-tax-assistant-ita-1'}
+                </ExternalLink>
               </p>
             </section>
 
@@ -151,7 +179,9 @@ export default function NotSureYouOwe() {
                 {'If you did not find guidance on your next step you may call a representative. You should have your information ready, including your tax return information.'}
               </p>
               <p>
-                <Link>{'https://www.irs.gov/help-resources/telephone-assistance'}</Link>
+                <ExternalLink href="https://www.irs.gov/help-resources/telephone-assistance">
+                  {'https://www.irs.gov/help-resources/telephone-assistance'}
+                </ExternalLink>
               </p>
 
               <h3>Submit a Freedom of Information Act request</h3>
@@ -164,7 +194,9 @@ export default function NotSureYouOwe() {
                 <li>Your Notices</li>
               </ul>
               <p>
-                <Link>{'https://www.irs.gov/uac/irs-freedom-of-information?_ga=1.209824021.1649112403.1474668304'}</Link>
+                <ExternalLink href="https://www.irs.gov/uac/irs-freedom-of-information?_ga=1.209824021.1649112403.1474668304">
+                  {'https://www.irs.gov/uac/irs-freedom-of-information?_ga=1.209824021.1649112403.1474668304'}
+                </ExternalLink>
               </p>
             </section>
           </Panel>

@@ -16,6 +16,10 @@
       margin-top: 0;
       padding-top: 0;
       border-top: none;
+
+      h2 {
+        margin-top: 0;
+      }
     }
   }
 
@@ -25,7 +29,7 @@
   }
 
   h3 {
-    margin-top: baselines(1.5);
+    margin-top: baselines(2);
     margin-bottom: baselines(0.25);
     font-size: $h3-font-size;
     font-weight: $font-bold;
@@ -34,7 +38,7 @@
   p {
     margin: baselines(0.25) 0;
     line-height: $base-line-height;
-    max-width: 40em;
+    max-width: 36em;
   }
 
   blockquote {

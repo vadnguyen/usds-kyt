@@ -81,7 +81,7 @@ function Home() {
         </FlexCol>
 
         <FlexCol md="4">
-          <Panel padded title="Padded panel">
+          <Panel padding="normal" title="Padded panel">
             {'Hello, I have amazing padding'}
           </Panel>
         </FlexCol>

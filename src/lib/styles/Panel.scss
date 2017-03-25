@@ -19,6 +19,30 @@
     padding-left: $module-padding;
     padding-right: $module-padding;
   }
+
+  &.padding-normal {
+    padding: $module-padding;
+
+    .title {
+      padding: 0;
+    }
+  }
+
+  &.padding-extra {
+    padding: $module-padding;
+
+    @include media-breakpoint-up(sm) {
+      padding: $module-padding * 2;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: $module-padding * 2.5;
+    }
+
+    .title {
+      padding: 0;
+    }
+  }
 }
 
 .padded {

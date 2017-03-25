@@ -57,7 +57,7 @@ export default class Account extends React.Component {
         </FlexRow>
         <FlexRow>
           <FlexCol lg="8" md="12">
-            <Panel className={styles.topRow} padded>
+            <Panel className={styles.topRow} padding="extra">
               <div className={styles.date}>
                 As of Mar 22, 2017, you owe:
               </div>

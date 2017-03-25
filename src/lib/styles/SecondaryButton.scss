@@ -21,7 +21,7 @@ $vertical-padding: $input-padding-vertical + $input-border-width;
   width: auto;
   background-color: $color-white;
   color: $color-primary;
-  box-shadow: inset 0 0 0 2px $color-primary;
+  box-shadow: $button-stroke $color-primary;
 
   &:hover {
     box-shadow: $button-stroke $color-primary-darker;

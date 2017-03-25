@@ -8,10 +8,10 @@ import styles from '../styles/Panel.scss';
  * @param {string} title  The module's title to be displayed in an h2
  * @param {node} children required. Expected to be the text to display inside the pill
  */
-export default function Panel({ title, padded, className, children }) {
+export default function Panel({ title, padding, className, children }) {
   const style = classnames({
     [styles.panel]: true,
-    [styles.padded]: padded,
+    [styles[`padding-${padding}`]]: padding,
   });
 
   return (
@@ -26,7 +26,11 @@ export default function Panel({ title, padded, className, children }) {
 
 Panel.propTypes = {
   title: PropTypes.string,
-  padded: PropTypes.bool,
+  padding: PropTypes.oneOf([
+    'none',
+    'normal',
+    'extra',
+  ]),
   className: PropTypes.string,
   children: PropTypes.node,
 };
