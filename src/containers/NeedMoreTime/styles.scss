@@ -36,9 +36,9 @@
   }
 
   p {
-    margin-bottom: baselines(0.5);
+    margin: baselines(0.25) 0;
     line-height: $base-line-height;
-    max-width: $type-max-width;
+    max-width: 36em;
   }
 
   blockquote {

@@ -24,6 +24,21 @@ const importNotSureYouOwe = (nextState, cb) => {
     .then(module => cb(null, module.default))
     .catch((e) => { throw e; });
 };
+const importPayByBank = (nextState, cb) => {
+  System.import('../containers/PayByBank')
+    .then(module => cb(null, module.default))
+    .catch((e) => { throw e; });
+};
+const importPayByCard = (nextState, cb) => {
+  System.import('../containers/PayByCard')
+    .then(module => cb(null, module.default))
+    .catch((e) => { throw e; });
+};
+const importNeedMoreTime = (nextState, cb) => {
+  System.import('../containers/NeedMoreTime')
+    .then(module => cb(null, module.default))
+    .catch((e) => { throw e; });
+};
 
 // We use `getComponent` to dynamically load routes.
 // https://github.com/reactjs/react-router/blob/master/docs/guides/DynamicRouting.md
@@ -32,6 +47,9 @@ const routes = (
     <IndexRoute getComponent={importHome} />
     <Route path="account" getComponent={importAccount} />
     <Route path="notsure" getComponent={importNotSureYouOwe} />
+    <Route path="paybybank" getComponent={importPayByBank} />
+    <Route path="paybycard" getComponent={importPayByCard} />
+    <Route path="needmoretime" getComponent={importNeedMoreTime} />
   </Route>
 );
 
@@ -41,6 +59,10 @@ const routes = (
 if (module.hot) {
   require('../containers/Home');    // eslint-disable-line global-require
   require('../containers/Account');   // eslint-disable-line global-require
+  require('../containers/NotSureYouOwe');   // eslint-disable-line global-require
+  require('../containers/PayByBank');   // eslint-disable-line global-require
+  require('../containers/PayByCard');   // eslint-disable-line global-require
+  require('../containers/NeedMoreTime');   // eslint-disable-line global-require
 }
 
 export default routes;

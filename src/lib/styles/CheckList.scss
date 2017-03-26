@@ -1,0 +1,28 @@
+@import './shared/variables';
+
+.checkList {
+  @include unstyled-list;
+
+  margin: baselines(1) 0;
+  padding-left: 1.5em;
+  max-width: $type-max-width;
+
+  .checkListItem {
+    position: relative;
+    line-height: $base-line-height;
+    margin-bottom: baselines(0.5);
+    padding-left: 1.5em;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0.25em;
+      left: 0;
+      width: 1em;
+      height: 1em;
+      background: url('#{$image-path}/check.svg') no-repeat 0 0;
+      background-size: 100%;
+    }
+  }
+}
+
