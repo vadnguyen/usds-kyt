@@ -11,6 +11,14 @@
 .breadcrumb {
   display: inline;
 
+  a {
+    color: $color-primary-darker;
+
+    &:hover {
+      color: $color-primary-darkest;
+    }
+  }
+
   &::after {
     display: inline;
     content: '/';

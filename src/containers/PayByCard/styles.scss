@@ -4,6 +4,12 @@
 .basedOn {
   margin-left: 0.4em;
   font-size: em(13px, $h2-font-size);
+  color: $color-gray;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    margin-left: 0;
+  }
 }
 
 .eg {
@@ -12,14 +18,106 @@
 }
 
 .oweTable {
-  th:first-of-type,
-  td:first-of-type {
-    padding-left: 0;
+  // position: relative;
+
+  caption {
+    @include sr-only;
   }
 
-  th:last-of-type,
-  td:last-of-type {
-    padding-right: 0;
-    text-align: right;
+  thead {
+    th:first-of-type {
+      padding-left: 0;
+    }
+
+    th:last-of-type {
+      padding-right: 0;
+      text-align: right;
+    }
   }
+
+  tbody {
+    th {
+      padding-left: 0;
+    }
+
+    td:last-of-type {
+      padding-right: 0;
+      text-align: right;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+
+    // Hide table headers
+    thead {
+      tr {
+        position: absolute;
+        top: -999999px;
+        left: -99999px;
+      }
+    }
+
+    tbody {
+      tr {
+        margin-bottom: baselines(1.5);
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      th {
+        font-weight: $font-bold;
+
+        &::before {
+          display: inline;
+        }
+      }
+
+      td {
+        padding: 0.9em 0;
+
+        &:last-of-type {
+          text-align: left;
+        }
+
+        &::before {
+          display: block;
+          font-size: $h6-font-size;
+          text-transform: uppercase;
+          color: $color-gray;
+          letter-spacing: em(0.5px);
+          margin-bottom: em(2px);
+          // margin-right: em(5px);
+        }
+      }
+
+      td,
+      th {
+        border: none;
+        border-bottom: solid 1px $color-gray-light;
+        position: relative;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      th::before { content: 'Tax Year '; }
+      td:nth-of-type(1)::before { content: 'Reason for Payment '; }
+      td:nth-of-type(2)::before { content: 'Payment Type '; }
+      td:nth-of-type(3)::before { content: 'Amount Owed '; }
+    }
+  }
+}
+
+.spaced {
+  margin: baselines(1) 0;
 }

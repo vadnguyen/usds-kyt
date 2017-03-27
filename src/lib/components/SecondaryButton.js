@@ -12,7 +12,8 @@ import styles from '../styles/SecondaryButton.scss';
  * @param {func} handleClick The function to be run when the button is clicked
  * @param {node} children required. Expected to be the text to display inside the button
  */
-export default function SecondaryButton({ type, padded, block, onClick, externalLink, children }) {
+export default function SecondaryButton(props) {
+  const { type, padded, block, onClick, externalLink, title, children } = props;
   const buttonClassName = classnames({
     [styles.secondaryButton]: true,
     [styles.block]: block,
@@ -21,7 +22,12 @@ export default function SecondaryButton({ type, padded, block, onClick, external
   });
 
   return (
-    <button type={type} className={buttonClassName} onClick={onClick}>
+    <button
+      type={type}
+      title={title}
+      className={buttonClassName}
+      onClick={onClick}
+    >
       <span>{children}</span>
     </button>
   );
@@ -33,6 +39,7 @@ SecondaryButton.propTypes = {
     'submit',
     'reset',
   ]).isRequired,
+  title: PropTypes.string,
   block: PropTypes.bool,
   padded: PropTypes.bool,
   externalLink: PropTypes.bool,
@@ -42,4 +49,9 @@ SecondaryButton.propTypes = {
 
 SecondaryButton.defaultProps = {
   type: 'button',
+  title: '',
+  block: false,
+  padded: false,
+  externalLink: false,
+  onClick: () => false,
 };

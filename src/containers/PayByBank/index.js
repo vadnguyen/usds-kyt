@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { browserHistory } from 'react-router';
 import Link from 'react-router/lib/Link';
 import { FlexContainer, FlexRow, FlexCol } from '../../lib/components/FlexGrid';
 import Panel from '../../lib/components/Panel';
@@ -9,12 +10,15 @@ import { Breadcrumbs, Breadcrumb } from '../../lib/components/Breadcrumbs';
 import { Table, TableRow, TableHeaderCell, TableCell } from '../../lib/components/Tables';
 import PrimaryButton from '../../lib/components/PrimaryButton';
 import SecondaryButton from '../../lib/components/SecondaryButton';
-import { browserHistory } from 'react-router';
 import styles from './styles.scss';
 
 export default function PayByBank() {
   function returnHome() {
-    browserHistory.push('/');
+    browserHistory.push('/account');
+  }
+
+  function testExternal() {
+    window.location.href = 'http://www.apple.com/';
   }
 
   return (
@@ -26,7 +30,7 @@ export default function PayByBank() {
               <Link to="/account">Your Account</Link>
             </Breadcrumb>
             <Breadcrumb>
-              Not Sure You Owe This Amount ?
+              Pay by Bank Account
             </Breadcrumb>
           </Breadcrumbs>
 
@@ -51,7 +55,7 @@ export default function PayByBank() {
                   Bank account number and routing number
                 </CheckListItem>
                 <CheckListItem>
-                  Payment type                                                                                                                                                                                                                                                  <span className={styles.eg}>(e.g., estimated tax)</span>
+                  Payment type                                                                                                                                                                                                                                                                                                    <span className={styles.eg}>(e.g., estimated tax)</span>
                 </CheckListItem>
                 <CheckListItem>
                   Details on what you owe <span className={styles.eg}>(tax year, amount owed). If you owe, the amount(s) will appear in the table below</span>
@@ -95,7 +99,14 @@ export default function PayByBank() {
 
               <Alert className={styles.spaced} type="info" body="IRS Direct Pay is a separate and secure online IRS system. You will need to provide IRS Direct Pay credentials to access and make a payment with this system." />
 
-              <PrimaryButton externalLink padded>Go to IRS Direct Pay</PrimaryButton>
+              <PrimaryButton
+                externalLink
+                padded
+                onClick={testExternal}
+                title="This button will open an IRS application to make a payment in a new window"
+              >
+                Go to IRS Direct Pay
+              </PrimaryButton>
               <SecondaryButton padded onClick={returnHome}>Back to account</SecondaryButton>
             </section>
 

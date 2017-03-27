@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { browserHistory } from 'react-router';
 import Link from 'react-router/lib/Link';
 import { FlexContainer, FlexRow, FlexCol } from '../../lib/components/FlexGrid';
 import Panel from '../../lib/components/Panel';
@@ -11,6 +12,14 @@ import SecondaryButton from '../../lib/components/SecondaryButton';
 import styles from './styles.scss';
 
 export default function PayByCard() {
+  function returnHome() {
+    browserHistory.push('/account');
+  }
+
+  function testExternal() {
+    window.location.href = 'http://www.apple.com/';
+  }
+
   return (
     <FlexContainer>
       <FlexRow>
@@ -57,7 +66,12 @@ export default function PayByCard() {
             <section>
               <h2>What you owe <span className={styles.basedOn}>(Based on our current data)</span></h2>
 
-              <Table className={styles.oweTable} borderless columns={['Tax Year', 'Reason for Payment', 'Payment Type', 'Amount Owed']}>
+              <Table
+                caption="What you owe by year"
+                className={styles.oweTable}
+                borderless
+                columns={['Tax Year', 'Reason for Payment', 'Payment Type', 'Amount Owed']}
+              >
                 <TableRow>
                   <TableHeaderCell>2015</TableHeaderCell>
                   <TableCell>Tax Return or Notice</TableCell>
@@ -83,10 +97,15 @@ export default function PayByCard() {
             <section>
               <h2>Make a payment</h2>
               <p>If you are paying towards multiple tax years you should enter them as separate payments.</p>
-              <PrimaryButton>Go to payment options</PrimaryButton>
-              <SecondaryButton>Back to account</SecondaryButton>
-
-
+              <PrimaryButton
+                externalLink
+                padded
+                onClick={testExternal}
+                title="This button will open an IRS page showing payment options in a new window"
+              >
+                Go to payment options
+              </PrimaryButton>
+              <SecondaryButton padded onClick={returnHome}>Back to account</SecondaryButton>
             </section>
 
 

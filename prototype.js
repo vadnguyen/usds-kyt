@@ -6,7 +6,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 
 // Import your component here for easy development
-import Home from './src/containers/Home';
+import Home from './src/components/Home';
 
 // Attach the component to the root.
 const rootEl = document.getElementById('root');

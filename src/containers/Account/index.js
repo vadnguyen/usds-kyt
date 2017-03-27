@@ -92,7 +92,11 @@ export default class Account extends React.Component {
           </FlexCol>
           <FlexCol lg="4" md="6">
             <Panel title="Overview by Tax Year">
-              <Table borderless columns={['Tax Year', 'You Owe']}>
+              <Table
+                borderless
+                caption="What you owe by tax year"
+                columns={['Tax Year', 'You Owe']}
+              >
                 <TableRow>
                   <TableCell>2015</TableCell>
                   <TableCell>$0.00</TableCell>
