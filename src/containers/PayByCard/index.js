@@ -5,7 +5,7 @@ import { FlexContainer, FlexRow, FlexCol } from '../../lib/components/FlexGrid';
 import Panel from '../../lib/components/Panel';
 import { Breadcrumbs, Breadcrumb } from '../../lib/components/Breadcrumbs';
 import { CheckList, CheckListItem } from '../../lib/components/CheckList';
-import { Table, TableRow, TableCell } from '../../lib/components/Tables';
+import { Table, TableRow, TableHeaderCell, TableCell } from '../../lib/components/Tables';
 import PrimaryButton from '../../lib/components/PrimaryButton';
 import SecondaryButton from '../../lib/components/SecondaryButton';
 import styles from './styles.scss';
@@ -37,19 +37,19 @@ export default function PayByCard() {
               </p>
               <CheckList>
                 <CheckListItem>
-                  <strong>Reason for payment</strong> (e.g. Tax Return or Notice, Estimated Tax)
+                  Reason for payment <span className={styles.eg}>(e.g. Tax Return or Notice, Estimated Tax)</span>
                 </CheckListItem>
                 <CheckListItem>
-                  <strong>Payment type</strong> (e.g. 1040)
+                  Payment type <span className={styles.eg}>(e.g. 1040)</span>
                 </CheckListItem>
                 <CheckListItem>
-                  <strong>Tax year associated with the payment</strong> (Note: if you are paying towards multiple tax years you should enter them as separate payments)
+                  Tax year associated with the payment <span className={styles.eg}>(Note: if you are paying towards multiple tax years you should enter them as separate payments)</span>
                 </CheckListItem>
                 <CheckListItem>
-                  <strong>Balance you owe or amount you want to pay</strong> (e.g. $500)
+                  Balance you owe or amount you want to pay <span className={styles.eg}>(e.g. $500)</span>
                 </CheckListItem>
                 <CheckListItem>
-                  <strong>Personal information of the Primary Taxpayer</strong> (Name, Address, and Taxpayer Identification Number) <strong>for the payment you want to make</strong>
+                  Personal information of the Primary Taxpayer for the payment you want to make <span className={styles.eg}>( e.g. Name, Address, and Taxpayer Identification Number)</span>
                 </CheckListItem>
               </CheckList>
             </section>
@@ -57,21 +57,21 @@ export default function PayByCard() {
             <section>
               <h2>What you owe <span className={styles.basedOn}>(Based on our current data)</span></h2>
 
-              <Table borderless columns={['Tax Year', 'Reason for Payment', 'Payment Type', 'Amount Owed']}>
+              <Table className={styles.oweTable} borderless columns={['Tax Year', 'Reason for Payment', 'Payment Type', 'Amount Owed']}>
                 <TableRow>
-                  <TableCell>2015</TableCell>
+                  <TableHeaderCell>2015</TableHeaderCell>
                   <TableCell>Tax Return or Notice</TableCell>
                   <TableCell>1040</TableCell>
                   <TableCell>$1,054.74</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>2014</TableCell>
+                  <TableHeaderCell>2014</TableHeaderCell>
                   <TableCell>Tax Return or Notice</TableCell>
                   <TableCell>Shared Responsibility Payment (Healthcare)</TableCell>
                   <TableCell>$233.89</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>2013</TableCell>
+                  <TableHeaderCell>2013</TableHeaderCell>
                   <TableCell>Tax Return or Notice</TableCell>
                   <TableCell>1040</TableCell>
                   <TableCell>$149.37</TableCell>

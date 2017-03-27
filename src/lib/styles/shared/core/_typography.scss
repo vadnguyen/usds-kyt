@@ -28,7 +28,7 @@ p {
 section {
   margin: baselines(2) 0;
   padding-top: baselines(1);
-  border-top: solid 1px $color-gray-light;
+  border-top: solid 1px $color-gray-lighter;
 
   &:first-of-type {
     margin-top: 0;
@@ -38,6 +38,10 @@ section {
     h2 {
       margin-top: 0;
     }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
   }
 }
 

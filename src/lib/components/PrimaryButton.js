@@ -12,16 +12,17 @@ import styles from '../styles/PrimaryButton.scss';
  * @param {func} handleClick The function to be run when the button is clicked
  * @param {node} children required. Expected to be the text to display inside the button
  */
-export default function PrimaryButton({ type, padded, block, onClick, children }) {
+export default function PrimaryButton({ type, padded, block, onClick, externalLink, children }) {
   const buttonClassName = classnames({
     [styles.primaryButton]: true,
     [styles.block]: block,
     [styles.padded]: padded,
+    [styles.externalLink]: externalLink,
   });
 
   return (
     <button type={type} className={buttonClassName} onClick={onClick}>
-      {children}
+      <span>{children}</span>
     </button>
   );
 }
@@ -30,6 +31,7 @@ PrimaryButton.propTypes = {
   type: PropTypes.string,
   block: PropTypes.bool,
   padded: PropTypes.bool,
+  externalLink: PropTypes.bool,
   onClick: PropTypes.func,
   children: PropTypes.node.isRequired,
 };

@@ -38,6 +38,25 @@ $vertical-padding: $input-padding-vertical + $input-border-width;
     box-shadow: $button-stroke $color-primary, $focus-shadow;
   }
 
+  &.externalLink {
+    > span {
+      &::after {
+        background: url('#{$image-path}/external-link.svg') no-repeat 0 0;
+        background-size: 100%;
+        content: '';
+        display: inline-block;
+        height: 0.9em;
+        width: 0.9em;
+        margin-bottom: -1px;
+        margin-left: 0.5em;
+      }
+
+      &:hover::after {
+        background-image: url('#{$image-path}/external-link-hover.svg');
+      }
+    }
+  }
+
   &.block {
     display: block;
     width: 100%;
@@ -46,5 +65,12 @@ $vertical-padding: $input-padding-vertical + $input-border-width;
   &.padded {
     padding-left: rem(50px);
     padding-right: rem(50px);
+
+    @include media-breakpoint-down(sm) {
+      padding-left: rem(20px);
+      padding-right: rem(20px);
+      display: block;
+      width: 100%;
+    }
   }
 }

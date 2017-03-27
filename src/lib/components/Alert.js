@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import classnames from '../helpers/classnames';
 import styles from '../styles/Alert.scss';
 
 /**
@@ -19,17 +20,23 @@ import styles from '../styles/Alert.scss';
  * @param {node} body  Text for the description
  * @param {string} role  ARIA role type
  */
-export default function Alert({ type, title, body, role }) {
-  const classNames = [styles['usa-alert'], styles[`usa-alert-${type}`]];
+export default function Alert({ type, title, body, role, className }) {
+  const style = classnames({
+    [styles['usa-alert']]: true,
+    [styles[`usa-alert-${type}`]]: true,
+  });
 
   if (type === 'error' && !role) {
     role = 'alert';
   }
 
   return (
-    <div className={classNames.join(' ')} role={role}>
+    <div className={classnames(style, className)} role={role}>
       <div className={styles['usa-alert-body']}>
-        <h3 className={styles['usa-alert-heading']}>{title}</h3>
+        {title
+          ? <h3 className={styles['usa-alert-heading']}>{title}</h3>
+          : null}
+
         <div className={styles['usa-alert-text']}>{body}</div>
       </div>
     </div>
@@ -50,12 +57,13 @@ Alert.propTypes = {
     TYPE_ERROR,
     TYPE_WARNING,
   ]),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   body: PropTypes.node.isRequired,
   role: PropTypes.oneOf([
     ROLE_ALERT,
     ROLE_ALERTDIALOG,
   ]),
+  className: PropTypes.string,
 };
 
 Alert.defaultProps = {

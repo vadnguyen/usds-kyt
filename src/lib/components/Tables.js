@@ -99,7 +99,7 @@ export function Table(props) {
 Table.propTypes = {
   className: PropTypes.string,
   borderless: PropTypes.bool,
-  caption: PropTypes.string,
+  caption: PropTypes.string.isRequired,
   columns: PropTypes.arrayOf(PropTypes.string).isRequired,
   data: PropTypes.arrayOf(PropTypes.object),
   children: PropTypes.node,

@@ -8,6 +8,7 @@ import SecondaryButton from '../../lib/components/SecondaryButton';
 import { FlexContainer, FlexRow, FlexCol } from '../../lib/components/FlexGrid';
 import { Table, TableRow, TableCell } from '../../lib/components/Tables';
 import { Breadcrumbs, Breadcrumb } from '../../lib/components/Breadcrumbs';
+import { CheckList, CheckListItem } from '../../lib/components/CheckList';
 
 import styles from './styles.scss';
 
@@ -55,6 +56,18 @@ function Home() {
               Pembroke Welsh Corgi
             </Breadcrumb>
           </Breadcrumbs>
+        </FlexCol>
+      </FlexRow>
+
+      <FlexRow>
+        <FlexCol>
+          <h2 className={styles.componentHeader}>CheckList</h2>
+          <CheckList>
+            <CheckListItem>Clean your room</CheckListItem>
+            <CheckListItem>Make your bed</CheckListItem>
+            <CheckListItem>Wash the dog</CheckListItem>
+            <CheckListItem>Walk the car</CheckListItem>
+          </CheckList>
         </FlexCol>
       </FlexRow>
 

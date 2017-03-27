@@ -2,19 +2,23 @@
 
 .table {
   border-spacing: 0;
+  border-collapse: collapse;
   margin: baselines(1) 0;
   min-width: 100%;
+  line-height: $heading-line-height;
 
   thead {
     th,
     td {
       // background-color: $color-gray-lightest;
       font-weight: $font-bold;
+      border-top: 1px solid $color-gray-light;
     }
   }
 
   th {
     text-align: left;
+    vertical-align: bottom;
   }
 
   tbody {
@@ -26,7 +30,9 @@
   th,
   td {
     background-color: $color-white;
-    border: 1px solid $color-gray-light;
+    border-bottom: 1px solid $color-gray-light;
+    border-left: 1px solid $color-gray-light;
+    border-right: 1px solid $color-gray-light;
     padding: baselines(0.5) $module-padding;
   }
 }

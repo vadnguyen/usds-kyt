@@ -5,3 +5,21 @@
   margin-left: 0.4em;
   font-size: em(13px, $h2-font-size);
 }
+
+.eg {
+  font-size: em(14px);
+  color: $color-gray;
+}
+
+.oweTable {
+  th:first-of-type,
+  td:first-of-type {
+    padding-left: 0;
+  }
+
+  th:last-of-type,
+  td:last-of-type {
+    padding-right: 0;
+    text-align: right;
+  }
+}
