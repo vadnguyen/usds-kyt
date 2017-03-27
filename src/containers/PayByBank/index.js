@@ -9,9 +9,14 @@ import { Breadcrumbs, Breadcrumb } from '../../lib/components/Breadcrumbs';
 import { Table, TableRow, TableHeaderCell, TableCell } from '../../lib/components/Tables';
 import PrimaryButton from '../../lib/components/PrimaryButton';
 import SecondaryButton from '../../lib/components/SecondaryButton';
+import { browserHistory } from 'react-router';
 import styles from './styles.scss';
 
 export default function PayByBank() {
+  function returnHome() {
+    browserHistory.push('/');
+  }
+
   return (
     <FlexContainer>
       <FlexRow>
@@ -46,7 +51,7 @@ export default function PayByBank() {
                   Bank account number and routing number
                 </CheckListItem>
                 <CheckListItem>
-                  Payment type                                                                                                                                                                                                                    <span className={styles.eg}>(e.g., estimated tax)</span>
+                  Payment type                                                                                                                                                                                                                                                  <span className={styles.eg}>(e.g., estimated tax)</span>
                 </CheckListItem>
                 <CheckListItem>
                   Details on what you owe <span className={styles.eg}>(tax year, amount owed). If you owe, the amount(s) will appear in the table below</span>
@@ -91,7 +96,7 @@ export default function PayByBank() {
               <Alert className={styles.spaced} type="info" body="IRS Direct Pay is a separate and secure online IRS system. You will need to provide IRS Direct Pay credentials to access and make a payment with this system." />
 
               <PrimaryButton externalLink padded>Go to IRS Direct Pay</PrimaryButton>
-              <SecondaryButton padded>Back to account</SecondaryButton>
+              <SecondaryButton padded onClick={returnHome}>Back to account</SecondaryButton>
             </section>
 
 
