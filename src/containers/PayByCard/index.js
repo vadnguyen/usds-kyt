@@ -3,9 +3,11 @@ import React from 'react';
 import Link from 'react-router/lib/Link';
 import { FlexContainer, FlexRow, FlexCol } from '../../lib/components/FlexGrid';
 import Panel from '../../lib/components/Panel';
-import ExternalLink from '../../lib/components/ExternalLink';
 import { Breadcrumbs, Breadcrumb } from '../../lib/components/Breadcrumbs';
 import { CheckList, CheckListItem } from '../../lib/components/CheckList';
+import { Table, TableRow, TableCell } from '../../lib/components/Tables';
+import PrimaryButton from '../../lib/components/PrimaryButton';
+import SecondaryButton from '../../lib/components/SecondaryButton';
 import styles from './styles.scss';
 
 export default function PayByCard() {
@@ -26,6 +28,7 @@ export default function PayByCard() {
 
           <Panel padding="extra">
             <section>
+              <h2>Information you will need to have available:</h2>
               <p>
                  You will be given the opportunity to select a payment processor of your choice from a list of providers.
               </p>
@@ -52,12 +55,36 @@ export default function PayByCard() {
             </section>
 
             <section>
-              <h2>What you owe</h2>
+              <h2>What you owe <span className={styles.basedOn}>(Based on our current data)</span></h2>
+
+              <Table borderless columns={['Tax Year', 'Reason for Payment', 'Payment Type', 'Amount Owed']}>
+                <TableRow>
+                  <TableCell>2015</TableCell>
+                  <TableCell>Tax Return or Notice</TableCell>
+                  <TableCell>1040</TableCell>
+                  <TableCell>$1,054.74</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>2014</TableCell>
+                  <TableCell>Tax Return or Notice</TableCell>
+                  <TableCell>Shared Responsibility Payment (Healthcare)</TableCell>
+                  <TableCell>$233.89</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>2013</TableCell>
+                  <TableCell>Tax Return or Notice</TableCell>
+                  <TableCell>1040</TableCell>
+                  <TableCell>$149.37</TableCell>
+                </TableRow>
+              </Table>
 
 
             </section>
             <section>
               <h2>Make a payment</h2>
+              <p>If you are paying towards multiple tax years you should enter them as separate payments.</p>
+              <PrimaryButton>Go to payment options</PrimaryButton>
+              <SecondaryButton>Back to account</SecondaryButton>
 
 
             </section>

@@ -17,7 +17,7 @@ $alerts: map-merge($usa-alerts, $usa-custom-alerts);
   margin-top: $module-padding;
   padding: $module-padding * 1.5;
   font-size: $base-font-size;
-  border: solid 1px $color-gray-lighter;
+  border: solid 1px $color-gray-light;
 
   @include media-breakpoint-up(lg) {
     background-size: 5.2rem;
@@ -72,7 +72,7 @@ $alerts: map-merge($usa-alerts, $usa-custom-alerts);
   margin-top: 0;
   font-size: $base-font-size;
   line-height: $base-line-height;
-  max-width: em(700px);
+  max-width: $type-max-width;
 
   p:first-child {
     margin-top: 0;

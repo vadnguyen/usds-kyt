@@ -8,7 +8,7 @@
   thead {
     th,
     td {
-      background-color: $color-gray-lightest;
+      // background-color: $color-gray-lightest;
       font-weight: $font-bold;
     }
   }
@@ -26,8 +26,8 @@
   th,
   td {
     background-color: $color-white;
-    border: 1px solid $color-gray;
-    padding: $module-padding;
+    border: 1px solid $color-gray-light;
+    padding: baselines(0.5) $module-padding;
   }
 }
 

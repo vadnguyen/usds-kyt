@@ -39,7 +39,7 @@ $font-sans:           'Source Sans Pro', 'Helvetica Neue', 'Helvetica', 'Roboto'
 
 $font-normal:         400 !default;
 $font-bold:           700 !default;
-$type-max-width:      40em !default;
+$type-max-width:      42em !default;
 
 // Color
 $color-blue:                 #227dae !default;
@@ -61,10 +61,10 @@ $color-base:                 #212121 !default;
 $color-black:                #222 !default;
 
 $color-gray-dark:            #4e4e4e !default;
-$color-gray:                 #5b616b !default; // lighten($color-gray-dark, 20%)
-$color-gray-medium:          #757575 !default; // lightest gray that passes color contrast
-$color-gray-light:           #aeb0b5 !default; // lighten($color-gray-dark, 60%)
-$color-gray-lighter:         #d6d7d9 !default; // lighten($color-gray-dark, 80%)
+$color-gray:                 #666666 !default; // lighten($color-gray-dark, 20%)
+$color-gray-medium:          #999999 !default; // lightest gray that passes color contrast
+$color-gray-light:           #c9c9c9 !default; // lighten($color-gray-dark, 60%)
+$color-gray-lighter:         #dddddd !default; // lighten($color-gray-dark, 80%)
 $color-gray-lightest:        #f1f1f1 !default; // lighten($color-gray-dark, 91%)
 
 $color-gray-warm-dark:       #494440 !default;

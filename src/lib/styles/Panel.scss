@@ -3,21 +3,20 @@
 .panel {
   box-sizing: border-box;
   background: white;
-  border: solid 1px $color-gray-lighter;
+  border: solid 1px $color-gray-light;
   font-family: $font-sans;
   font-size: $base-font-size;
   line-height: $base-line-height;
   margin-top: $module-padding;
+  overflow-x: hidden;
 
   .title {
+    margin-top: 0;
     margin-bottom: baselines(0.5);
-    font-family: $font-sans;
-    font-weight: $font-normal;
-    font-size: $h2-font-size;
-    line-height: $heading-line-height;
     padding-top: $module-padding;
     padding-left: $module-padding;
     padding-right: $module-padding;
+    font-size: $h2-font-size;
   }
 
   &.padding-normal {
