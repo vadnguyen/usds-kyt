@@ -74,12 +74,14 @@ function Home() {
       <FlexRow>
         <FlexCol>
           <h2 className={styles.componentHeader}>PrimaryButton and SecondaryButton</h2>
-          <PrimaryButton>Click me</PrimaryButton>
-          <SecondaryButton>Click me</SecondaryButton>
-          <PrimaryButton padded>Click me</PrimaryButton>
-          <SecondaryButton padded>Click me</SecondaryButton>
-          <PrimaryButton block>Click me</PrimaryButton>
-          <SecondaryButton block>Click me</SecondaryButton>
+          <PrimaryButton>Regular</PrimaryButton>
+          <SecondaryButton>Regular</SecondaryButton>
+          <PrimaryButton padded>Padded</PrimaryButton>
+          <SecondaryButton padded>Padded</SecondaryButton>
+          <PrimaryButton padded externalLink>Padded externalLink</PrimaryButton>
+          <SecondaryButton padded externalLink>Padded externalLink</SecondaryButton>
+          <PrimaryButton block>Block</PrimaryButton>
+          <SecondaryButton block>Block</SecondaryButton>
         </FlexCol>
       </FlexRow>
 
