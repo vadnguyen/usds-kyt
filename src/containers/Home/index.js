@@ -1,10 +1,12 @@
 
 import React from 'react';
+import { PhoneValidator } from '../../lib/helpers/newValidators';
 import Alert from '../../lib/components/Alert';
 import Label from '../../lib/components/Label';
 import Panel from '../../lib/components/Panel';
 import PrimaryButton from '../../lib/components/PrimaryButton';
 import SecondaryButton from '../../lib/components/SecondaryButton';
+import TextField from '../../lib/components/TextField';
 import { FlexContainer, FlexRow, FlexCol } from '../../lib/components/FlexGrid';
 import { Table, TableRow, TableCell } from '../../lib/components/Tables';
 import { Breadcrumbs, Breadcrumb } from '../../lib/components/Breadcrumbs';
@@ -31,6 +33,35 @@ function Home() {
           <p className={styles.p}>
             {'Base styling as been added at the App component level that sets the basics like the font-family, default font-size and color.'}
           </p>
+        </FlexCol>
+      </FlexRow>
+
+      <FlexRow>
+        <FlexCol>
+          <TextField
+            label="This input is required"
+            id="secondInput"
+            required
+          />
+
+          <TextField
+            label="Email address"
+            type="email"
+            value="gwashington@potus.com"
+            isValid
+          />
+
+          <TextField
+            label="ZIP code"
+            value="666"
+            errorMessage="Not a valid ZIP Code"
+          />
+
+          <TextField
+            type="tel"
+            label="Phone number"
+            validator={PhoneValidator}
+          />
         </FlexCol>
       </FlexRow>
 

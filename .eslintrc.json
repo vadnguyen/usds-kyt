@@ -10,6 +10,7 @@
   ],
 
   "rules": {
-    "no-trailing-spaces": "off"
+    "no-trailing-spaces": "off",
+    "max-len": "off"
   }
 }
