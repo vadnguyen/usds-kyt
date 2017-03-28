@@ -81,6 +81,9 @@ export function Table(props) {
       {props.caption
         ? <caption>{props.caption}</caption>
         : null}
+      {props.srCaption
+        ? <caption className={styles.srOnly}>{props.srCaption}</caption>
+        : null}
 
       <thead>
         <tr>{renderHeaders(props.columns)}</tr>
@@ -99,14 +102,20 @@ export function Table(props) {
 Table.propTypes = {
   className: PropTypes.string,
   borderless: PropTypes.bool,
-  caption: PropTypes.string.isRequired,
+  caption: PropTypes.string,
+  srCaption: PropTypes.string,
   columns: PropTypes.arrayOf(PropTypes.string).isRequired,
   data: PropTypes.arrayOf(PropTypes.object),
   children: PropTypes.node,
 };
 
 Table.defaultProps = {
+  className: null,
   borderless: false,
+  caption: null,
+  srCaption: null,
+  data: null,
+  children: null,
 };
 
 /**

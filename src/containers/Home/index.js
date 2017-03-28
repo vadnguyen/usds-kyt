@@ -139,14 +139,14 @@ function Home() {
           <h2 className={styles.componentHeader}>Tables</h2>
         </FlexCol>
         <FlexCol>
-          <Table columns={['Title', 'Foo', 'Bear']}>
+          <Table srCaption="Test table" columns={['Title', 'Foo', 'Bear']}>
             <TableRow>
               <TableCell>Happy happy</TableCell>
               <TableCell>joy joy</TableCell>
               <TableCell>song</TableCell>
             </TableRow>
           </Table>
-          <Table borderless columns={['Title', 'Foo', 'Bear']}>
+          <Table srCaption="Test table" borderless columns={['Title', 'Foo', 'Bear']}>
             <TableRow>
               <TableCell>Happy happy</TableCell>
               <TableCell>joy joy</TableCell>

@@ -7,6 +7,10 @@
   min-width: 100%;
   line-height: $heading-line-height;
 
+  .srOnly {
+    @include sr-only;
+  }
+
   thead {
     th,
     td {
