@@ -2,13 +2,10 @@
 import React from 'react';
 import Link from 'react-router/lib/Link';
 import PaymentOptions from '../../components/PaymentOptions';
+import OverviewByTaxYear from '../../components/OverviewByTaxYear';
 import Alert from '../../lib/components/Alert';
-// import Label from '../../lib/components/Label';
 import Panel from '../../lib/components/Panel';
-// import PrimaryButton from '../../lib/components/PrimaryButton';
-// import SecondaryButton from '../../lib/components/SecondaryButton';
 import { FlexContainer, FlexRow, FlexCol } from '../../lib/components/FlexGrid';
-import { Table, TableRow, TableCell } from '../../lib/components/Tables';
 import styles from './styles.scss';
 
 export default class Account extends React.Component {
@@ -91,22 +88,7 @@ export default class Account extends React.Component {
             <PaymentOptions />
           </FlexCol>
           <FlexCol lg="4" md="6">
-            <Panel title="Overview by Tax Year">
-              <Table
-                borderless
-                caption="What you owe by tax year"
-                columns={['Tax Year', 'You Owe']}
-              >
-                <TableRow>
-                  <TableCell>2015</TableCell>
-                  <TableCell>$0.00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>2014</TableCell>
-                  <TableCell>$0.00</TableCell>
-                </TableRow>
-              </Table>
-            </Panel>
+            <OverviewByTaxYear />
           </FlexCol>
         </FlexRow>
       </FlexContainer>
