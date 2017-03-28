@@ -1,0 +1,12 @@
+@import './shared/variables';
+
+.label {
+  display: block;
+  margin-top: 3rem;
+  max-width: $input-max-width;
+}
+
+.required:after {
+  color: $color-irs-red;
+  content: ' (*Required)';
+}
