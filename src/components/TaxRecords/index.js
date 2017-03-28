@@ -34,7 +34,7 @@ export default function TaxRecords() {
         </TableRow>
         <TableRow>
           <TableCell>Adjusted gross income</TableCell>
-          <TableCell><strong>$38,000.00</strong></TableCell>
+          <TableCell><strong>$38,302.07</strong></TableCell>
         </TableRow>
         <TableRow>
           <TableCell>Balance owed</TableCell>
