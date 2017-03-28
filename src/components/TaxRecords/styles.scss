@@ -1,6 +1,11 @@
 @import '../../lib/styles/shared/variables';
 
-.overview {
+@mixin padded {
+  padding-left: $module-padding;
+  padding-right: $module-padding;
+}
+
+.records {
   margin-top: 0;
   
   thead {
@@ -14,4 +19,16 @@
       text-align: right;
     }
   }
+}
+
+.year {
+  text-align: center;
+}
+
+.padded {
+  @include padded;
+}
+
+.bitty {
+  font-size: em(13px);
 }

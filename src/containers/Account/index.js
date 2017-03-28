@@ -3,6 +3,8 @@ import React from 'react';
 import Link from 'react-router/lib/Link';
 import PaymentOptions from '../../components/PaymentOptions';
 import OverviewByTaxYear from '../../components/OverviewByTaxYear';
+import RecentPayments from '../../components/RecentPayments';
+import TaxRecords from '../../components/TaxRecords';
 import Alert from '../../lib/components/Alert';
 import Panel from '../../lib/components/Panel';
 import { FlexContainer, FlexRow, FlexCol } from '../../lib/components/FlexGrid';
@@ -89,6 +91,12 @@ export default class Account extends React.Component {
           </FlexCol>
           <FlexCol lg="4" md="6">
             <OverviewByTaxYear />
+          </FlexCol>
+          <FlexCol lg="4" md="6">
+            <RecentPayments />
+          </FlexCol>
+          <FlexCol lg="4" md="6">
+            <TaxRecords />
           </FlexCol>
         </FlexRow>
       </FlexContainer>

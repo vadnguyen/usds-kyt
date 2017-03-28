@@ -1,6 +1,11 @@
 @import '../../lib/styles/shared/variables';
 
-.overview {
+@mixin padded {
+  padding-left: $module-padding;
+  padding-right: $module-padding;
+}
+
+.payments {
   margin-top: 0;
   
   thead {
@@ -14,4 +19,9 @@
       text-align: right;
     }
   }
+}
+
+.bitty {
+  @include padded;
+  font-size: em(13px);
 }
