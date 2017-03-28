@@ -9,33 +9,33 @@ import App from '../containers/App';
 // https://gist.github.com/sokra/27b24881210b56bbaff7#code-splitting-with-es6
 
 const importHome = (nextState, cb) => {
-  System.import('../containers/Home')
+  import('../containers/Home')
     .then(module => cb(null, module.default))
     .catch((e) => { throw e; });
 };
 
 const importAccount = (nextState, cb) => {
-  System.import('../containers/Account')
+  import('../containers/Account')
     .then(module => cb(null, module.default))
     .catch((e) => { throw e; });
 };
 const importNotSureYouOwe = (nextState, cb) => {
-  System.import('../containers/NotSureYouOwe')
+  import('../containers/NotSureYouOwe')
     .then(module => cb(null, module.default))
     .catch((e) => { throw e; });
 };
 const importPayByBank = (nextState, cb) => {
-  System.import('../containers/PayByBank')
+  import('../containers/PayByBank')
     .then(module => cb(null, module.default))
     .catch((e) => { throw e; });
 };
 const importPayByCard = (nextState, cb) => {
-  System.import('../containers/PayByCard')
+  import('../containers/PayByCard')
     .then(module => cb(null, module.default))
     .catch((e) => { throw e; });
 };
 const importNeedMoreTime = (nextState, cb) => {
-  System.import('../containers/NeedMoreTime')
+  import('../containers/NeedMoreTime')
     .then(module => cb(null, module.default))
     .catch((e) => { throw e; });
 };
