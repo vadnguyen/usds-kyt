@@ -2,5 +2,8 @@
   "extends": "stylelint-config-kyt",
 
   "rules": {
+    "no-eol-whitespace": null,
+    "rule-empty-line-before": null,
+    "declaration-empty-line-before": null
   }
 }
