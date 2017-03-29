@@ -11,6 +11,7 @@ import PrimaryButton from '../../lib/components/PrimaryButton';
 import SecondaryButton from '../../lib/components/SecondaryButton';
 import TextField from '../../lib/components/TextField';
 import TextArea from '../../lib/components/TextArea';
+import Dropdown from '../../lib/components/Dropdown';
 import { FlexContainer, FlexRow, FlexCol } from '../../lib/components/FlexGrid';
 import { Table, TableRow, TableCell } from '../../lib/components/Tables';
 import { Breadcrumbs, Breadcrumb } from '../../lib/components/Breadcrumbs';
@@ -69,6 +70,17 @@ function Home() {
             label="Phone number"
             validator={PhoneValidator}
           />
+        </FlexCol>
+      </FlexRow>
+
+      <FlexRow>
+        <FlexCol>
+          <h2 className={styles.componentHeader}>Dropdown</h2>
+          <Dropdown label="Dropdown label" id="dropdown1">
+            <option value="value1">Option A</option>
+            <option value="value2">Option B</option>
+            <option value="value3">Option C</option>
+          </Dropdown>
         </FlexCol>
       </FlexRow>
 
