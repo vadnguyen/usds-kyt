@@ -3,6 +3,7 @@ import React from 'react';
 import PhoneValidator from '../../lib/helpers/validators/PhoneValidator';
 import ZipCodeValidator from '../../lib/helpers/validators/ZipCodeValidator';
 import EmailValidator from '../../lib/helpers/validators/EmailValidator';
+import ConfirmationCodeValidator from '../../lib/helpers/validators/ConfirmationCodeValidator';
 import Alert from '../../lib/components/Alert';
 import Label from '../../lib/components/Label';
 import Panel from '../../lib/components/Panel';
@@ -41,9 +42,10 @@ function Home() {
       <FlexRow>
         <FlexCol>
           <TextField
-            label="This input is required"
+            label="Confirmation Code"
             id="secondInput"
             required
+            validator={ConfirmationCodeValidator}
           />
 
           <TextField
