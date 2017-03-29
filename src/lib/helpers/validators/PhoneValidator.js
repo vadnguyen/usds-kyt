@@ -6,10 +6,10 @@
  * }
  */
 
- export function PhoneValidator(entry) {
+ export default function PhoneValidator(input) {
    const parsed = {
      reformat: true,
-     originalValue: entry,
+     originalValue: input,
      isValid: false,
      formatted: null,
      value: '',
@@ -28,14 +28,14 @@
    const separator = /[.,/#!$%^&*;:{}=\-–—_`~()\s+]/;
    const phoneFormat = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 
-   if (typeof entry === 'string' && entry.length) {
+   if (typeof input === 'string' && input.length) {
      // Loop over input text and check if each char is a digit or separator
-     for (let i = 0; i < entry.length; i += 1) {
-       if (number.test(entry[i])) {
-         parsed.value += entry[i];
-         parsed.cleanedValue += entry[i];
-       } else if (separator.test(entry[i])) {
-         parsed.cleanedValue += entry[i];
+     for (let i = 0; i < input.length; i += 1) {
+       if (number.test(input[i])) {
+         parsed.value += input[i];
+         parsed.cleanedValue += input[i];
+       } else if (separator.test(input[i])) {
+         parsed.cleanedValue += input[i];
        } else {
          // char is an illegal character so stop checking
          parsed.invalidChar = true;
