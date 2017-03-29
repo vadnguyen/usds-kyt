@@ -3,7 +3,7 @@
 textarea {
   display: block;
   appearance: none;
-  height: $input-height;
+  height: $input-height + 10;
   width: 100%;
   max-width: $input-max-width;
   margin: 0.2em 0;
