@@ -9,6 +9,7 @@ import Panel from '../../lib/components/Panel';
 import PrimaryButton from '../../lib/components/PrimaryButton';
 import SecondaryButton from '../../lib/components/SecondaryButton';
 import TextField from '../../lib/components/TextField';
+import TextArea from '../../lib/components/TextArea';
 import { FlexContainer, FlexRow, FlexCol } from '../../lib/components/FlexGrid';
 import { Table, TableRow, TableCell } from '../../lib/components/Tables';
 import { Breadcrumbs, Breadcrumb } from '../../lib/components/Breadcrumbs';
@@ -66,6 +67,15 @@ function Home() {
             label="Phone number"
             validator={PhoneValidator}
           />
+        </FlexCol>
+      </FlexRow>
+
+      <FlexRow>
+        <FlexCol>
+          <h2 className={styles.componentHeader}>Text Area</h2>
+          <TextArea />
+          <TextArea label="Valid TextArea" isValid />
+          <TextArea required errorMessage="Please enter a description" />
         </FlexCol>
       </FlexRow>
 
