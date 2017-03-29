@@ -120,7 +120,6 @@ export default class TextField extends Component {
    * Checks input value against required status and passed validators
    */
   validate() {
-    const validators = this.props.validator;
     // Check if field empty
     if (!this.state.value) {
       // If it's required, say so
