@@ -1,0 +1,43 @@
+@import './shared/variables';
+
+textarea {
+  display: block;
+  appearance: none;
+  height: $input-height + 10;
+  width: 100%;
+  max-width: $input-max-width;
+  margin: 0.2em 0;
+  padding: $input-padding-vertical 0.7em;
+  border: $input-border-width solid $color-gray;
+  border-radius: $border-radius / 2;
+  box-sizing: border-box;
+  color: $color-black; // standardize on firefox
+  font-family: $font-sans;
+  font-size: $base-font-size;
+  line-height: $input-line-height;
+  outline: none;
+
+  &:focus,
+  &.usa-input-focus {
+    box-shadow: $focus-shadow;
+  }
+
+  &.success {
+    border: 3px solid $color-green-light;
+    /*padding: ($input-padding-vertical - rem(2px)) 0.7em;*/
+  }
+
+  &.error {
+    border: 3px solid $color-irs-red;
+    /*padding: ($input-padding-vertical - rem(2px)) 0.7em;*/
+  }
+}
+
+.errorMessage {
+  color: $color-irs-red;
+  display: block;
+  font-size: $base-font-size;
+  font-weight: $font-bold;
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
