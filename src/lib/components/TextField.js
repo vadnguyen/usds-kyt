@@ -45,7 +45,7 @@ export default class TextField extends Component {
       value: this.props.value,
       isPristine: pristine,
       isValid: this.props.isValid,
-      hasError: this.props.errorMessage,
+      hasError: this.props.errorMessage !== '',
       errorMessage: this.props.errorMessage,
     };
 
@@ -228,7 +228,7 @@ TextField.defaultProps = {
   type: 'text',
   enableSpellCheck: false,
   required: false,
-  errorMessage: null,
+  errorMessage: '',
   onBlur: null,
   onChange: null,
   validator: null,
